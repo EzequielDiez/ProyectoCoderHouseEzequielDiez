@@ -1,0 +1,720 @@
+/* Comienzo CSS Body */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../imagenes/background.png);
+    background-size: cover;
+}
+
+.gridbody {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.gridbody {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 160px auto 200px;
+    grid-template-areas: "header""main""footer";
+    gap: 40px;
+}
+
+/* Fin CSS Body */
+
+/* Comienzo CSS Header */
+
+.logoheader{
+    grid-area: logoheader;
+}
+
+.tituloheader{
+    grid-area: tituloheader;
+}
+
+.navheader{
+    grid-area: navheader;
+    border-top: 3px solid;
+    border-color: #764B36;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "logoheader tituloheader" "logoheader navheader";
+    background-color: rgb(225, 206, 190, 0.5);
+    width:100%;
+    border-bottom: 3px solid;
+    border-color: #764B36;
+    position: fixed;
+}
+
+.logoheader{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-self:flex-start;
+}
+
+.logoheaderimg {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.tituloheader{
+    font-size: 40px;
+    font-weight: bold;
+    color:#764B36;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.ulnavheader{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.navheader li{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    list-style: none;
+}
+
+.navheader li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #764B36;
+}
+
+.navheader li a:hover{
+    color: white;
+}
+
+/* Fin CSS Header */
+
+/* Comienzo CSS Main Index */
+
+.titulomain{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulomain h1{
+    width: 50%;
+    align-self:center;
+    color: #764B36;
+    font-weight: bold;
+}
+
+.titulomain p{
+    margin-top: 20px;
+    width: 80%;
+    align-self: center;
+    color:black;
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.hrmain{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #764B36;
+    height: 3px;
+}
+
+.redessocialesmain img{
+    grid-area: redessocialesimagen;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.redessocialesmain h2{
+    grid-area: redessocialesh2;
+    display: flex;
+    justify-self: start;
+    align-self: center;
+    font-size: 30px;
+    color: #764B36;
+}
+
+.redessocialesmain p{
+    grid-area: redessocialesp;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+}
+
+.redessocialesmain{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
+    margin-bottom: 50px;
+}
+
+.publicidadmain img{
+    grid-area: publicidadimagen;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.publicidadmain h2{
+    grid-area: publicidadh2;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    font-size: 30px;
+    color: #764B36;
+}
+
+.publicidadmain p{
+    grid-area: publicidadp;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+}
+
+.publicidadmain{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
+    margin-bottom: 50px;
+}
+
+.fotografiamain img{
+    grid-area: fotografiaimagen;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.fotografiamain h2{
+    grid-area: fotografiah2;
+    display: flex;
+    justify-self: start;
+    align-self: center;
+    font-size: 30px;
+    color: #764B36;
+}
+
+.fotografiamain p{
+    grid-area: fotografiap;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+}
+
+.fotografiamain{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
+    margin-bottom: 50px;
+}
+
+.logosmain{
+    background-color: rgb(225, 206, 190, 0.5);
+    margin-top: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newslettermain{
+    margin: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newslettermain h2{
+    font-size: 50px;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.newslettermain fieldset{
+    border: none;
+}
+
+.newslettermain fieldset input{
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.inputemail{
+    width: 50%;
+    margin-left: 19%;
+}
+
+.inputsubmit{
+    width: 10%;
+    cursor: pointer;
+    background-color:rgb(225, 206, 190, 0.5);
+}
+
+/* Fin CSS Main Index */
+
+/* Inicio CSS Main Quienes somos */
+
+.tituloquienessomos{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.historia{
+    color: #764B36;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.historia p{
+    color: black;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.imagenperfil1{
+    grid-area: imagenperfil1;
+}
+
+.perfil1 h2{
+    grid-area: perfil1h2;
+}
+
+.perfil1 p{
+    grid-area: perfil1p;
+}
+
+.perfil1{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 20% auto;
+    grid-template-areas: "imagenperfil1 perfil1h2" "imagenperfil1 perfil1p";
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.perfil1 h2{
+    font-size: 30px;
+    color: #764B36;
+}
+
+.perfil1 p{
+    font-size: 16px;
+    align-self: center;
+    font-weight: 550;
+    color: black;
+}
+
+.imagenperfil1{
+    border-radius: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.imagenperfil2{
+    grid-area: imagenperfil2;
+}
+
+.perfil2 h2{
+    grid-area: perfil2h2;
+}
+
+.perfil2 p{
+    grid-area: perfil2p;
+}
+
+.perfil2{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto 40%;
+    grid-template-rows: 20% auto;
+    grid-template-areas: "perfil2h2 imagenperfil2" "perfil2p imagenperfil2";
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.perfil2 h2{
+    font-size: 30px;
+    color: #764B36;
+}
+
+.perfil2 p{
+    font-size: 16px;
+    align-self: center;
+    font-weight: 550;
+    color: black;
+}
+
+.imagenperfil2{
+    border-radius: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+/* Fin CSS Main Quienes Somos */
+
+/* Inicio CSS Main Nuestros servicios */
+
+.titulonuestrosservicios{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.servicios{
+    color: #764B36;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.servicios ul{
+    color: black;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.servicios ul li{
+    margin-bottom: 10px;
+}
+
+/* Fin CSS Main Nuestros servicios */
+
+/* Inicio CSS Main Nuestros planes */
+
+.titulotuplan{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.planes{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.numeroplanes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.numeroplanes div{
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.armatuplan{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    font-size: 35px;
+}
+
+.checkbox{
+    font-size: 30px;
+    font-weight: 600;
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    word-spacing: 50px;
+}
+
+.submitplan{
+    border: none;
+}
+
+.fieldsetplan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: none;
+    margin: 25px;
+    margin-top: 50px;
+}
+
+.fieldsetplan input{
+    margin-bottom: 20px;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.submitplan textarea{
+    font-size: 20px;
+    height: 200px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.inputsubmitplan{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    background-color: rgb(225, 206, 190, 0.5);
+    cursor: pointer;
+}
+
+/* Fin CSS Main Nuestros planes */
+
+/* Inicio CSS Main Portfolio */
+
+.mainportfolio{
+    height: 1000px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* Fin CSS Main Portfolio */
+
+/* Inicio CSS Main Contacto */
+
+.titulocontacto{
+    color: #764B36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.listacontacto{
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+
+.listacontacto li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.listacontacto li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #764B36;
+}
+
+.listacontacto li a:hover{
+    color: white;
+}
+
+.listacontacto img{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+
+}
+
+
+/* Fin CSS Main Contacto */
+
+/* Inicio CSS Footer */
+
+.logofooter{
+    grid-area: logofooter;
+}
+
+.footer h3{
+    grid-area: h3footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #764B36;
+    font-size: 30px;
+}
+
+.redesfooter{
+    grid-area: redesfooter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navfooter{
+    grid-area: navfooter;
+    display: flex;
+    justify-content: center;
+}
+
+.footer h4{
+    grid-area: h4footer;
+    color: #764B36;
+    font-size: 20px;
+}
+
+.botonirarriba{
+    grid-area: botonfooter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: rgb(225, 206, 190, 0.5);
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 35% 20% 35% 10%;
+    grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
+    width:100%;
+    border-top: 3px solid;
+    border-color: #764B36;
+}
+
+.logofooterimg {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+}
+
+.navfooter li{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navfooter li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #764B36;
+}
+
+.navfooter li a:hover{
+    color: white;
+}
+
+.redesfooter a img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px
+}
+
+.botonirarriba img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Fin CSS Footer */
+
+@media screen and (max-width: 720px){
+    
+    .gridbody {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 180px auto 200px;
+        grid-template-areas: "header""main""footer";
+        gap: 40px;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 18% auto;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "logoheader tituloheader" "logoheader navheader";
+        background-color: rgb(225, 206, 190, 0.5);
+        width:100%;
+        border-bottom: 3px solid;
+        border-color: #764B36;
+        position: fixed;
+    }
+
+    .inputsubmit{
+        width: 20%;
+        cursor: pointer;
+        background-color:rgb(225, 206, 190, 0.5);
+    }
+
+    footer {
+        background-color: rgb(225, 206, 190, 0.5);
+        display: grid;
+        grid-template-columns: 15% auto 10%;
+        grid-template-rows: 25% 25% 35% 15%;
+        grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
+        width:100%;
+        border-top: 3px solid;
+        border-color: #764B36;
+    }
+
+    .botonirarriba img{
+        width: 30px;
+        height: 30px;
+    }
+}
