@@ -40,14 +40,6 @@ body{
 
 /* Comienzo CSS Header */
 
-.logoheader{
-    grid-area: logoheader;
-}
-
-.tituloheader{
-    grid-area: tituloheader;
-}
-
 .navheader{
     grid-area: navheader;
     border-top: 3px solid;
@@ -55,10 +47,6 @@ body{
 }
 
 header{
-    display: grid;
-    grid-template-columns: 30% auto;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "logoheader tituloheader" "logoheader navheader";
     background-color: rgb(225, 206, 190, 0.5);
     width:100%;
     border-bottom: 3px solid;
@@ -80,35 +68,32 @@ header{
 }
 
 .tituloheader{
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
     color:#764B36;
-    display: flex;
-    justify-content: end;
-    align-items: center;
 }
 
-.ulnavheader{
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-}
-
-.navheader li{
-    font-size: 16px;
+.navbar li{
+    font-size: 24px;
     font-weight: bold;
     padding: 10px;
     list-style: none;
 }
 
-.navheader li a{
+.navbar li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
     color: #764B36;
 }
 
-.navheader li a:hover{
+.navbar li a:hover{
     color: white;
+    transform: scale(1.1);
+}
+
+.navbar-nav{
+    border-top: 3px;
+    border-color: #764B36;
 }
 
 /* Fin CSS Header */
@@ -554,7 +539,7 @@ header{
     font-weight: 600;
     display: flex;
     flex-direction: row;
-    margin-left: 20%;
+    align-items: center;
 }
 
 .listacontacto li{
@@ -577,6 +562,11 @@ header{
     width: 30px;
     margin-right: 20px;
 
+}
+
+div iframe{
+    border-color: #764B36;
+    border-radius: 5%;
 }
 
 
