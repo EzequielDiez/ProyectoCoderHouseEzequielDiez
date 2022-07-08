@@ -52,6 +52,7 @@ header{
     border-bottom: 3px solid;
     border-color: #764B36;
     position: fixed;
+    z-index: 1;
 }
 
 .logoheader{
@@ -106,10 +107,12 @@ header{
 }
 
 .titulomain h1{
-    width: 50%;
+    width: 60%;
     align-self:center;
     color: #764B36;
     font-weight: bold;
+    font-size: 4rem;
+    margin: 3rem;
 }
 
 .titulomain p{
@@ -117,13 +120,13 @@ header{
     width: 80%;
     align-self: center;
     color:black;
-    font-size: 20px;
-    margin-bottom: 70px;
+    font-size: 2rem;
+    margin:3rem;
 }
 
 .hrmain{
     width: 50%;
-    margin: 0 auto;
+    margin: 4rem auto;
     background-color: #764B36;
     height: 3px;
 }
@@ -140,7 +143,8 @@ header{
     display: flex;
     justify-self: start;
     align-self: center;
-    font-size: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: #764B36;
 }
 
@@ -149,18 +153,17 @@ header{
     display: flex;
     justify-self: center;
     align-self: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 550;
     color: black;
 }
 
 .redessocialesmain{
-    margin-top: 100px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
     grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
-    margin-bottom: 50px;
+    margin: 7rem;    
 }
 
 .publicidadmain img{
@@ -175,7 +178,8 @@ header{
     display: flex;
     justify-self: end;
     align-self: center;
-    font-size: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: #764B36;
 }
 
@@ -184,18 +188,17 @@ header{
     display: flex;
     justify-self: end;
     align-self: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 550;
     color: black;
 }
 
 .publicidadmain{
-    margin-top: 100px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
     grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
-    margin-bottom: 50px;
+    margin: 7rem;
 }
 
 .fotografiamain img{
@@ -210,7 +213,8 @@ header{
     display: flex;
     justify-self: start;
     align-self: center;
-    font-size: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: #764B36;
 }
 
@@ -219,18 +223,17 @@ header{
     display: flex;
     justify-self: center;
     align-self: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 550;
     color: black;
 }
 
 .fotografiamain{
-    margin-top: 100px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
     grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
-    margin-bottom: 50px;
+    margin: 7rem;
 }
 
 .logosmain{
@@ -243,13 +246,15 @@ header{
 }
 
 .newslettermain{
-    margin: 150px;
+    margin: 16rem;
     display: flex;
     flex-direction: column;
 }
 
 .newslettermain h2{
     font-size: 50px;
+    font-weight: 600;
+    color: #764B36;
     align-self: center;
     margin-bottom: 50px;
 }
@@ -262,6 +267,7 @@ header{
     padding: 20px;
     border-radius: 5px;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .inputemail{
@@ -585,6 +591,7 @@ div iframe{
     align-items: center;
     color: #764B36;
     font-size: 30px;
+    font-weight: 600;
 }
 
 .redesfooter{
@@ -605,6 +612,7 @@ div iframe{
     grid-area: h4footer;
     color: #764B36;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .botonirarriba{
