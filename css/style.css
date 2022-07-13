@@ -710,11 +710,30 @@ div .logofooter{
 }
 
 @media screen and (max-width: 1400px){
-    
+
+    .gridbody {
+        grid-template-rows: 110px auto 200px;
+    }
+
 /* HEADER */
 
+    .logoheader{
+        width: 110px;
+        height: 110px;
+    }
+
+    .logoheaderimg {
+        width: 110px;
+        height: 110px;
+    }
+
+    .tituloheader{
+        font-size: 2rem;
+    }
+
     .navbar li{
-        font-size: 1.18rem;
+        font-size: 1rem;
+        padding: 0.3rem;
     }
 
 /* FIN HEADER */
@@ -722,17 +741,23 @@ div .logofooter{
 /* INDEX */
 
     .titulomain h1{
-        font-size: 3.3rem;
+        font-size: 2.3rem;
+        margin: 1rem;
     }
 
     .titulomain p{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    .hrmain{
+        margin: 2.5rem auto;
     }
 
     .redessocialesmain img{
         justify-self: start;
-        width: 450px;
-        height: 450px;
+        width: 400px;
+        height: 400px;
     }
 
     .redessocialesmain p{
@@ -748,8 +773,8 @@ div .logofooter{
 
     .publicidadmain img{
         justify-self: end;
-        width: 450px;
-        height: 450px;
+        width: 400px;
+        height: 400px;
     }
 
     .publicidadmain p{
@@ -765,8 +790,8 @@ div .logofooter{
 
     .fotografiamain img{
         justify-self: start;
-        width: 450px;
-        height: 450px;
+        width: 400px;
+        height: 400px;
     }
 
     .fotografiamain p{
@@ -781,7 +806,12 @@ div .logofooter{
     }
 
     .logosmain{
-        height: 300px;
+        height: 250px;
+    }
+
+    .logosmain img{
+        height: 200px;
+        width: 200px;
     }
 
     .newslettermain{
