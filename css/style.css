@@ -75,7 +75,7 @@ header{
 }
 
 .navbar li{
-    font-size: 24px;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 10px;
     list-style: none;
@@ -641,6 +641,10 @@ footer {
     align-items: flex-end;
 }
 
+div .logofooter{
+    align-self: flex-end;
+}
+
 .navfooter li{
     display: inline-block;
     font-size: 16px;
@@ -682,18 +686,6 @@ footer {
         gap: 40px;
     }
 
-    header{
-        display: grid;
-        grid-template-columns: 18% auto;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: "logoheader tituloheader" "logoheader navheader";
-        background-color: rgb(225, 206, 190, 0.5);
-        width:100%;
-        border-bottom: 3px solid;
-        border-color: #764B36;
-        position: fixed;
-    }
-
     .inputsubmit{
         width: 20%;
         cursor: pointer;
@@ -714,5 +706,327 @@ footer {
     .botonirarriba img{
         width: 30px;
         height: 30px;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    
+/* HEADER */
+
+    .navbar li{
+        font-size: 1.18rem;
+    }
+
+/* FIN HEADER */
+
+/* INDEX */
+
+    .titulomain h1{
+        font-size: 3.3rem;
+    }
+
+    .titulomain p{
+        font-size: 1.8rem;
+    }
+
+    .redessocialesmain img{
+        justify-self: start;
+        width: 450px;
+        height: 450px;
+    }
+
+    .redessocialesmain p{
+        font-size: 1.4rem;
+    }
+
+    .redessocialesmain{
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .publicidadmain img{
+        justify-self: end;
+        width: 450px;
+        height: 450px;
+    }
+
+    .publicidadmain p{
+        font-size: 1.4rem;
+    }
+
+    .publicidadmain{
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .fotografiamain img{
+        justify-self: start;
+        width: 450px;
+        height: 450px;
+    }
+
+    .fotografiamain p{
+        font-size: 1.4rem;
+    }
+
+    .fotografiamain{
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .logosmain{
+        height: 300px;
+    }
+
+    .newslettermain{
+        margin: 8rem;
+    }
+
+    .newslettermain h2{
+        font-size: 2.5rem;
+    }
+
+    .newslettermain fieldset input{
+        padding: 15px;
+    }
+
+    .inputemail{
+        width: 45%;
+    }
+
+    .inputsubmit{
+        width: 15%;
+    }
+
+/* FIN INDEX */
+
+
+
+
+
+/* FOOTER */
+
+    .footer h3{
+        font-size: 1.8rem;
+    }
+
+    .footer h4{
+        font-size: 1.2rem;
+    }
+
+    footer {
+        grid-template-columns: 15% auto 15%;
+    }
+
+    .logofooterimg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .navfooter li{
+        font-size: 1rem;
+    }
+
+    .navfooter li a:hover{
+        color: white;
+    }
+
+    .redesfooter a img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .botonirarriba img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+/* FIN FOOTER */
+
+}
+
+
+
+@media screen and (max-width: 1200px){
+
+    .gridbody {
+        grid-template-rows: 130px auto 200px;
+    }
+    
+/* HEADER */
+        
+    .logoheader{
+        width: 130px;
+        height: 130px;
+    }
+    
+    .logoheaderimg {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .tituloheader{
+        font-size: 2.5rem;
+    }
+    
+    .navbar li{
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+            
+/* FIN HEADER */
+
+/* INDEX */
+
+.redessocialesmain img{
+    justify-self: center;
+    align-self: center;
+    height: 450px;
+    width: 450px;
+}
+
+.redessocialesmain h2{
+    justify-self: center;
+}
+
+.redessocialesmain p{
+    font-size: 1.5rem;
+}
+
+.redessocialesmain{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55% 5% 40%;
+    grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
+    gap: 1.5rem;
+    margin: 7rem;    
+}
+
+.publicidadmain img{
+    justify-self: center;
+    align-self: center;
+    height: 450px;
+    width: 450px;
+}
+
+.publicidadmain h2{
+    justify-self: center;
+}
+
+.publicidadmain p{
+    justify-self: center;
+    font-size: 1.5rem;
+}
+
+.publicidadmain{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55% 5% 40%;
+    grid-template-areas:  "publicidadimagen" "publicidadh2" "publicidadp";
+    gap: 1.5rem;
+    margin: 7rem;
+}
+
+.fotografiamain img{
+    justify-self: center;
+    align-self: center;
+    height: 450px;
+    width: 450px;
+}
+
+.fotografiamain h2{
+    justify-self: center;
+}
+
+.fotografiamain p{
+    justify-self: center;
+    font-size: 1.5rem;
+}
+
+.fotografiamain{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55% 5% 40%;
+    grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
+    gap: 1.5rem;
+    margin: 7rem;
+}
+
+.logosmain{
+    margin-top: 10rem;
+    height: 300px;
+}
+
+.newslettermain{
+    margin: 10rem;
+}
+
+.newslettermain h2{
+    font-size: 2.1rem;
+}
+
+.newslettermain fieldset input{
+    padding: 12px;
+}
+
+.inputemail{
+    width: 50%;
+    margin-left: 19%;
+}
+
+.inputsubmit{
+    width: 20%;
+}
+
+/* FIN INDEX */
+
+/* FOOTER */
+
+    .footer h3{
+        font-size: 1.8rem;
+    }
+
+    .footer h4{
+        font-size: 1.2rem;
+    }
+
+    footer {
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: 35% 25% 30% 10%;
+    }
+
+    .logofooterimg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .redesfooter a img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .botonirarriba img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+/* FIN FOOTER */
+
+}
+
+@media screen and (max-width: 991px){
+    
+    .navbar li{
+        font-size: 0.93rem;
+    }
+
+    .tituloheader{
+        font-size: 2.5rem;
     }
 }
