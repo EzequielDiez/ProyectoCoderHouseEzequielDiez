@@ -1,6 +1,8 @@
 /* Comienzo CSS Body */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap');
+@import "variables";
+
 
 *{
     margin: 0;
@@ -43,14 +45,14 @@ body{
 .navheader{
     grid-area: navheader;
     border-top: 3px solid;
-    border-color: #764B36;
+    border-color: $colorPrincipal;
 }
 
 header{
     background-color: rgb(225, 206, 190, 0.5);
     width:100%;
     border-bottom: 3px solid;
-    border-color: #764B36;
+    border-color: $colorPrincipal;
     position: fixed;
     z-index: 1;
 }
@@ -71,7 +73,7 @@ header{
 .tituloheader{
     font-size: 3rem;
     font-weight: bold;
-    color:#764B36;
+    color: $colorPrincipal;
 }
 
 .navbar li{
@@ -84,7 +86,7 @@ header{
 .navbar li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: #764B36;
+    color: $colorPrincipal;
 }
 
 .navbar li a:hover{
@@ -94,7 +96,7 @@ header{
 
 .navbar-nav{
     border-top: 3px;
-    border-color: #764B36;
+    border-color: $colorPrincipal;
 }
 
 /* Fin CSS Header */
@@ -104,58 +106,29 @@ header{
 .titulomain{
     display: flex;
     flex-direction: column;
-}
-
-.titulomain h1{
-    width: 60%;
-    align-self:center;
-    color: #764B36;
-    font-weight: bold;
-    font-size: 4rem;
-    margin: 3rem;
-}
-
-.titulomain p{
-    margin-top: 20px;
-    width: 80%;
-    align-self: center;
-    color:black;
-    font-size: 2rem;
-    margin:3rem;
+    h1{
+        width: 60%;
+        align-self:center;
+        color: $colorPrincipal;
+        font-weight: bold;
+        font-size: 4rem;
+        margin: 3rem;
+    }
+    p{
+        margin-top: 20px;
+        width: 80%;
+        align-self: center;
+        color:black;
+        font-size: 2rem;
+        margin:3rem;
+    }
 }
 
 .hrmain{
     width: 50%;
     margin: 4rem auto;
-    background-color: #764B36;
+    background-color: $colorPrincipal;
     height: 3px;
-}
-
-.redessocialesmain img{
-    grid-area: redessocialesimagen;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
-
-.redessocialesmain h2{
-    grid-area: redessocialesh2;
-    display: flex;
-    justify-self: start;
-    align-self: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #764B36;
-}
-
-.redessocialesmain p{
-    grid-area: redessocialesp;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    font-size: 1.5rem;
-    font-weight: 550;
-    color: black;
 }
 
 .redessocialesmain{
@@ -163,34 +136,31 @@ header{
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
     grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
-    margin: 7rem;    
-}
-
-.publicidadmain img{
-    grid-area: publicidadimagen;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
-
-.publicidadmain h2{
-    grid-area: publicidadh2;
-    display: flex;
-    justify-self: end;
-    align-self: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #764B36;
-}
-
-.publicidadmain p{
-    grid-area: publicidadp;
-    display: flex;
-    justify-self: end;
-    align-self: center;
-    font-size: 1.5rem;
-    font-weight: 550;
-    color: black;
+    margin: 7rem;
+    img{
+        grid-area: redessocialesimagen;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
+    h2{
+        grid-area: redessocialesh2;
+        display: flex;
+        justify-self: start;
+        align-self: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $colorPrincipal;
+    }
+    p{
+        grid-area: redessocialesp;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 550;
+        color: black;
+    }
 }
 
 .publicidadmain{
@@ -199,33 +169,30 @@ header{
     grid-template-rows: 20% 80%;
     grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
     margin: 7rem;
-}
-
-.fotografiamain img{
-    grid-area: fotografiaimagen;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
-
-.fotografiamain h2{
-    grid-area: fotografiah2;
-    display: flex;
-    justify-self: start;
-    align-self: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #764B36;
-}
-
-.fotografiamain p{
-    grid-area: fotografiap;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    font-size: 1.5rem;
-    font-weight: 550;
-    color: black;
+    img{
+        grid-area: publicidadimagen;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
+    h2{
+        grid-area: publicidadh2;
+        display: flex;
+        justify-self: end;
+        align-self: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $colorPrincipal;
+    }
+    p{
+        grid-area: publicidadp;
+        display: flex;
+        justify-self: end;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 550;
+        color: black;
+    }
 }
 
 .fotografiamain{
@@ -234,6 +201,30 @@ header{
     grid-template-rows: 20% 80%;
     grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
     margin: 7rem;
+    img{
+        grid-area: fotografiaimagen;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
+    h2{
+        grid-area: fotografiah2;
+        display: flex;
+        justify-self: start;
+        align-self: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $colorPrincipal;
+    }
+    p{
+        grid-area: fotografiap;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 550;
+        color: black;
+    }
 }
 
 .logosmain{
@@ -249,36 +240,31 @@ header{
     margin: 16rem;
     display: flex;
     flex-direction: column;
-}
-
-.newslettermain h2{
-    font-size: 50px;
-    font-weight: 600;
-    color: #764B36;
-    align-self: center;
-    margin-bottom: 50px;
-}
-
-.newslettermain fieldset{
-    border: none;
-}
-
-.newslettermain fieldset input{
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.inputemail{
-    width: 50%;
-    margin-left: 19%;
-}
-
-.inputsubmit{
-    width: 10%;
-    cursor: pointer;
-    background-color:rgb(225, 206, 190, 0.5);
+    h2{
+        font-size: 50px;
+        font-weight: 600;
+        color: $colorPrincipal;
+        align-self: center;
+        margin-bottom: 50px;
+    }
+    fieldset{
+        border: none;
+        input{
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .inputemail{
+            width: 50%;
+            margin-left: 19%;
+        }
+        .inputsubmit{
+            width: 10%;
+            cursor: pointer;
+            background-color:rgb(225, 206, 190, 0.5);
+        }
+    }
 }
 
 /* Fin CSS Main Index */
@@ -286,7 +272,7 @@ header{
 /* Inicio CSS Main Quienes somos */
 
 .tituloquienessomos{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -294,7 +280,7 @@ header{
 }
 
 .historia{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: column;
     margin-left: 7%;
@@ -333,7 +319,7 @@ header{
 
 .perfil1 h2{
     font-size: 30px;
-    color: #764B36;
+    color: $colorPrincipal;
 }
 
 .perfil1 p{
@@ -375,7 +361,7 @@ header{
 
 .perfil2 h2{
     font-size: 30px;
-    color: #764B36;
+    color: $colorPrincipal;
 }
 
 .perfil2 p{
@@ -397,7 +383,7 @@ header{
 /* Inicio CSS Main Nuestros servicios */
 
 .titulonuestrosservicios{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -405,7 +391,7 @@ header{
 }
 
 .servicios{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: column;
     margin-left: 7%;
@@ -428,7 +414,7 @@ header{
 /* Inicio CSS Main Nuestros planes */
 
 .titulotuplan{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -436,7 +422,7 @@ header{
 }
 
 .planes{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -460,7 +446,7 @@ header{
 }
 
 .armatuplan{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -472,7 +458,7 @@ header{
 .checkbox{
     font-size: 30px;
     font-weight: 600;
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -533,7 +519,7 @@ header{
 /* Inicio CSS Main Contacto */
 
 .titulocontacto{
-    color: #764B36;
+    color: $colorPrincipal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -556,7 +542,7 @@ header{
 .listacontacto li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: #764B36;
+    color: $colorPrincipal;
 }
 
 .listacontacto li a:hover{
@@ -571,7 +557,7 @@ header{
 }
 
 div iframe{
-    border-color: #764B36;
+    border-color: $colorPrincipal;
     border-radius: 5%;
 }
 
@@ -580,46 +566,11 @@ div iframe{
 
 /* Inicio CSS Footer */
 
-.logofooter{
-    grid-area: logofooter;
-}
-
-.footer h3{
-    grid-area: h3footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #764B36;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.redesfooter{
-    grid-area: redesfooter;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.navfooter{
-    grid-area: navfooter;
-    display: flex;
-    justify-content: center;
-}
-
 .footer h4{
     grid-area: h4footer;
-    color: #764B36;
+    color: $colorPrincipal;
     font-size: 20px;
     font-weight: 600;
-}
-
-.botonirarriba{
-    grid-area: botonfooter;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 footer {
@@ -630,48 +581,70 @@ footer {
     grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
     width:100%;
     border-top: 3px solid;
-    border-color: #764B36;
-}
-
-.logofooterimg {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-end;
-}
-
-div .logofooter{
-    align-self: flex-end;
-}
-
-.navfooter li{
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.navfooter li a{
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: #764B36;
-}
-
-.navfooter li a:hover{
-    color: white;
-}
-
-.redesfooter a img{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 10px
-}
-
-.botonirarriba img{
-    width: 50px;
-    height: 50px;
+    border-color: $colorPrincipal;
+    div .logofooter{
+        align-self: flex-end;
+    }
+    .logofooter{
+        grid-area: logofooter;
+        .logofooterimg {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    h3{
+        grid-area: h3footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $colorPrincipal;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .redesfooter{
+        grid-area: redesfooter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a img{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 10px
+        }
+    }
+    .botonirarriba{
+        grid-area: botonfooter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .navfooter{
+        grid-area: navfooter;
+        display: flex;
+        justify-content: center;
+        li{
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            a{
+                transition: all 0.3s ease 0s;
+                text-decoration: none;
+                color: $colorPrincipal;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 /* Fin CSS Footer */
@@ -700,7 +673,7 @@ div .logofooter{
         grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
         width:100%;
         border-top: 3px solid;
-        border-color: #764B36;
+        border-color: $colorPrincipal;
     }
 
     .botonirarriba img{

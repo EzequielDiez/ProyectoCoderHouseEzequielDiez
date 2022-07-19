@@ -99,7 +99,6 @@ header {
   display: flex;
   flex-direction: column;
 }
-
 .titulomain h1 {
   width: 60%;
   align-self: center;
@@ -108,7 +107,6 @@ header {
   font-size: 4rem;
   margin: 3rem;
 }
-
 .titulomain p {
   margin-top: 20px;
   width: 80%;
@@ -125,13 +123,19 @@ header {
   height: 3px;
 }
 
+.redessocialesmain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
+  margin: 7rem;
+}
 .redessocialesmain img {
   grid-area: redessocialesimagen;
   display: flex;
   justify-self: center;
   align-self: center;
 }
-
 .redessocialesmain h2 {
   grid-area: redessocialesh2;
   display: flex;
@@ -141,46 +145,10 @@ header {
   font-weight: 600;
   color: #764B36;
 }
-
 .redessocialesmain p {
   grid-area: redessocialesp;
   display: flex;
   justify-self: center;
-  align-self: center;
-  font-size: 1.5rem;
-  font-weight: 550;
-  color: black;
-}
-
-.redessocialesmain {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 80%;
-  grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
-  margin: 7rem;
-}
-
-.publicidadmain img {
-  grid-area: publicidadimagen;
-  display: flex;
-  justify-self: center;
-  align-self: center;
-}
-
-.publicidadmain h2 {
-  grid-area: publicidadh2;
-  display: flex;
-  justify-self: end;
-  align-self: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #764B36;
-}
-
-.publicidadmain p {
-  grid-area: publicidadp;
-  display: flex;
-  justify-self: end;
   align-self: center;
   font-size: 1.5rem;
   font-weight: 550;
@@ -194,28 +162,25 @@ header {
   grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
   margin: 7rem;
 }
-
-.fotografiamain img {
-  grid-area: fotografiaimagen;
+.publicidadmain img {
+  grid-area: publicidadimagen;
   display: flex;
   justify-self: center;
   align-self: center;
 }
-
-.fotografiamain h2 {
-  grid-area: fotografiah2;
+.publicidadmain h2 {
+  grid-area: publicidadh2;
   display: flex;
-  justify-self: start;
+  justify-self: end;
   align-self: center;
   font-size: 2.5rem;
   font-weight: 600;
   color: #764B36;
 }
-
-.fotografiamain p {
-  grid-area: fotografiap;
+.publicidadmain p {
+  grid-area: publicidadp;
   display: flex;
-  justify-self: center;
+  justify-self: end;
   align-self: center;
   font-size: 1.5rem;
   font-weight: 550;
@@ -228,6 +193,30 @@ header {
   grid-template-rows: 20% 80%;
   grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
   margin: 7rem;
+}
+.fotografiamain img {
+  grid-area: fotografiaimagen;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.fotografiamain h2 {
+  grid-area: fotografiah2;
+  display: flex;
+  justify-self: start;
+  align-self: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #764B36;
+}
+.fotografiamain p {
+  grid-area: fotografiap;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: black;
 }
 
 .logosmain {
@@ -244,7 +233,6 @@ header {
   display: flex;
   flex-direction: column;
 }
-
 .newslettermain h2 {
   font-size: 50px;
   font-weight: 600;
@@ -252,24 +240,20 @@ header {
   align-self: center;
   margin-bottom: 50px;
 }
-
 .newslettermain fieldset {
   border: none;
 }
-
 .newslettermain fieldset input {
   padding: 20px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: 600;
 }
-
-.inputemail {
+.newslettermain fieldset .inputemail {
   width: 50%;
   margin-left: 19%;
 }
-
-.inputsubmit {
+.newslettermain fieldset .inputsubmit {
   width: 10%;
   cursor: pointer;
   background-color: rgba(225, 206, 190, 0.5);
@@ -560,45 +544,11 @@ div iframe {
 
 /* Fin CSS Main Contacto */
 /* Inicio CSS Footer */
-.logofooter {
-  grid-area: logofooter;
-}
-
-.footer h3 {
-  grid-area: h3footer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #764B36;
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.redesfooter {
-  grid-area: redesfooter;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navfooter {
-  grid-area: navfooter;
-  display: flex;
-  justify-content: center;
-}
-
 .footer h4 {
   grid-area: h4footer;
   color: #764B36;
   font-size: 20px;
   font-weight: 600;
-}
-
-.botonirarriba {
-  grid-area: botonfooter;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 footer {
@@ -611,46 +561,68 @@ footer {
   border-top: 3px solid;
   border-color: #764B36;
 }
-
-.logofooterimg {
+footer div .logofooter {
+  align-self: flex-end;
+}
+footer .logofooter {
+  grid-area: logofooter;
+}
+footer .logofooter .logofooterimg {
   width: 150px;
   height: 150px;
   cursor: pointer;
   display: flex;
   align-items: flex-end;
 }
-
-div .logofooter {
-  align-self: flex-end;
-}
-
-.navfooter li {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.navfooter li a {
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
+footer h3 {
+  grid-area: h3footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #764B36;
+  font-size: 30px;
+  font-weight: 600;
 }
-
-.navfooter li a:hover {
-  color: white;
+footer .redesfooter {
+  grid-area: redesfooter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.redesfooter a img {
+footer .redesfooter a img {
   display: inline-block;
   width: 40px;
   height: 40px;
   margin: 10px;
 }
-
-.botonirarriba img {
+footer .botonirarriba {
+  grid-area: botonfooter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .botonirarriba img {
   width: 50px;
   height: 50px;
+}
+footer .navfooter {
+  grid-area: navfooter;
+  display: flex;
+  justify-content: center;
+}
+footer .navfooter li {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+footer .navfooter li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #764B36;
+}
+footer .navfooter li a:hover {
+  color: white;
 }
 
 /* Fin CSS Footer */
