@@ -12,91 +12,86 @@
 body{
     background-image: url(../imagenes/background.png);
     background-size: cover;
-}
-
-.gridbody {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.header{
-    grid-area: header;
-}
-
-.main{
-    grid-area: main;
-}
-
-.footer{
-    grid-area: footer;
-}
-
-.gridbody {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 160px auto 200px;
-    grid-template-areas: "header""main""footer";
-    gap: 40px;
+    .gridbody {
+        font-family: 'Montserrat', sans-serif;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 160px auto 200px;
+        grid-template-areas: "header""main""footer";
+        gap: 40px;
+        .header{
+            grid-area: header;
+        }
+        .main{
+            grid-area: main;
+        }
+        .footer{
+            grid-area: footer;
+        }        
+    }
 }
 
 /* Fin CSS Body */
 
 /* Comienzo CSS Header */
 
-.navheader{
-    grid-area: navheader;
-    border-top: 3px solid;
-    border-color: $colorPrincipal;
-}
-
 header{
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "logoheader tituloheader" "logoheader navheader";
     background-color: rgb(225, 206, 190, 0.5);
     width:100%;
     border-bottom: 3px solid;
     border-color: $colorPrincipal;
     position: fixed;
     z-index: 1;
-}
-
-.logoheader{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-self:flex-start;
-}
-
-.logoheaderimg {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-}
-
-.tituloheader{
-    font-size: 3rem;
-    font-weight: bold;
-    color: $colorPrincipal;
-}
-
-.navbar li{
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 10px;
-    list-style: none;
-}
-
-.navbar li a{
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: $colorPrincipal;
-}
-
-.navbar li a:hover{
-    color: white;
-    transform: scale(1.1);
-}
-
-.navbar-nav{
-    border-top: 3px;
-    border-color: $colorPrincipal;
+    .logoheader{
+        grid-area: logoheader;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-self:flex-start;
+        .logoheaderimg {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+    }
+    .tituloheader{
+        grid-area: tituloheader;
+        font-size: 3rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 1rem;
+        color: $colorPrincipal;
+    }
+    .navheader{
+        grid-area: navheader;
+        border-top: 3px solid;
+        border-color: $colorPrincipal;
+        .navbar-nav{
+            border-top: 3px;
+            border-color: $colorPrincipal;
+            li{
+                font-size: 1.4rem;
+                font-weight: bold;
+                padding: 10px;
+                list-style: none;
+                a{
+                    transition: all 0.3s ease 0s;
+                    text-decoration: none;
+                    color: $colorPrincipal;
+                    &:hover{
+                        color: white;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Fin CSS Header */
@@ -649,39 +644,6 @@ footer {
 
 /* Fin CSS Footer */
 
-@media screen and (max-width: 720px){
-    
-    .gridbody {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 180px auto 200px;
-        grid-template-areas: "header""main""footer";
-        gap: 40px;
-    }
-
-    .inputsubmit{
-        width: 20%;
-        cursor: pointer;
-        background-color:rgb(225, 206, 190, 0.5);
-    }
-
-    footer {
-        background-color: rgb(225, 206, 190, 0.5);
-        display: grid;
-        grid-template-columns: 15% auto 10%;
-        grid-template-rows: 25% 25% 35% 15%;
-        grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
-        width:100%;
-        border-top: 3px solid;
-        border-color: $colorPrincipal;
-    }
-
-    .botonirarriba img{
-        width: 30px;
-        height: 30px;
-    }
-}
-
 @media screen and (max-width: 1400px){
 
     .gridbody {
@@ -809,10 +771,6 @@ footer {
 
 /* FIN INDEX */
 
-
-
-
-
 /* FOOTER */
 
     .footer h3{
@@ -853,8 +811,6 @@ footer {
 /* FIN FOOTER */
 
 }
-
-
 
 @media screen and (max-width: 1200px){
 
@@ -1025,6 +981,42 @@ footer {
 
 @media screen and (max-width: 991px){
     
+    header{
+        grid-template-columns: 15% auto 10%;
+        grid-template-rows: 100%;
+        grid-template-areas: "logoheader tituloheader navheader";
+        .tituloheader{
+            font-size: 2.7rem;
+            justify-content: center;
+            padding-right: 0;
+        }
+        .navheader{
+            border: 0;
+            align-self: center;
+            .navbar-nav{
+                border-top: 3px;
+                border-color: $colorPrincipal;
+                li{
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    padding: 10px;
+                    list-style: none;
+                    a{
+                        transition: all 0.3s ease 0s;
+                        text-decoration: none;
+                        color: $colorPrincipal;
+                        &:hover{
+                            color: white;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
     .navbar li{
         font-size: 0.93rem;
     }

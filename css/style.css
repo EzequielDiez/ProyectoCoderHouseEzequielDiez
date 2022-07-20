@@ -9,40 +9,31 @@ body {
   background-image: url(../imagenes/background.png);
   background-size: cover;
 }
-
-.gridbody {
+body .gridbody {
   font-family: "Montserrat", sans-serif;
-}
-
-.header {
-  grid-area: header;
-}
-
-.main {
-  grid-area: main;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.gridbody {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 160px auto 200px;
   grid-template-areas: "header" "main" "footer";
   gap: 40px;
 }
+body .gridbody .header {
+  grid-area: header;
+}
+body .gridbody .main {
+  grid-area: main;
+}
+body .gridbody .footer {
+  grid-area: footer;
+}
 
 /* Fin CSS Body */
 /* Comienzo CSS Header */
-.navheader {
-  grid-area: navheader;
-  border-top: 3px solid;
-  border-color: #764B36;
-}
-
 header {
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "logoheader tituloheader" "logoheader navheader";
   background-color: rgba(225, 206, 190, 0.5);
   width: 100%;
   border-bottom: 3px solid;
@@ -50,47 +41,51 @@ header {
   position: fixed;
   z-index: 1;
 }
-
-.logoheader {
+header .logoheader {
+  grid-area: logoheader;
   width: 150px;
   height: 150px;
   display: flex;
   justify-self: flex-start;
 }
-
-.logoheaderimg {
+header .logoheader .logoheaderimg {
   width: 150px;
   height: 150px;
   cursor: pointer;
 }
-
-.tituloheader {
+header .tituloheader {
+  grid-area: tituloheader;
   font-size: 3rem;
   font-weight: bold;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
   color: #764B36;
 }
-
-.navbar li {
+header .navheader {
+  grid-area: navheader;
+  border-top: 3px solid;
+  border-color: #764B36;
+}
+header .navheader .navbar-nav {
+  border-top: 3px;
+  border-color: #764B36;
+}
+header .navheader .navbar-nav li {
   font-size: 1.4rem;
   font-weight: bold;
   padding: 10px;
   list-style: none;
 }
-
-.navbar li a {
+header .navheader .navbar-nav li a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #764B36;
 }
-
-.navbar li a:hover {
+header .navheader .navbar-nav li a:hover {
   color: white;
   transform: scale(1.1);
-}
-
-.navbar-nav {
-  border-top: 3px;
-  border-color: #764B36;
 }
 
 /* Fin CSS Header */
@@ -626,34 +621,6 @@ footer .navfooter li a:hover {
 }
 
 /* Fin CSS Footer */
-@media screen and (max-width: 720px) {
-  .gridbody {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 180px auto 200px;
-    grid-template-areas: "header" "main" "footer";
-    gap: 40px;
-  }
-  .inputsubmit {
-    width: 20%;
-    cursor: pointer;
-    background-color: rgba(225, 206, 190, 0.5);
-  }
-  footer {
-    background-color: rgba(225, 206, 190, 0.5);
-    display: grid;
-    grid-template-columns: 15% auto 10%;
-    grid-template-rows: 25% 25% 35% 15%;
-    grid-template-areas: "logofooter h3footer botonfooter" "logofooter navfooter botonfooter" "logofooter redesfooter botonfooter" "h4footer h4footer botonfooter";
-    width: 100%;
-    border-top: 3px solid;
-    border-color: #764B36;
-  }
-  .botonirarriba img {
-    width: 30px;
-    height: 30px;
-  }
-}
 @media screen and (max-width: 1400px) {
   .gridbody {
     grid-template-rows: 110px auto 200px;
@@ -913,6 +880,39 @@ footer .navfooter li a:hover {
   /* FIN FOOTER */
 }
 @media screen and (max-width: 991px) {
+  header {
+    grid-template-columns: 15% auto 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: "logoheader tituloheader navheader";
+  }
+  header .tituloheader {
+    font-size: 2.7rem;
+    justify-content: center;
+    padding-right: 0;
+  }
+  header .navheader {
+    border: 0;
+    align-self: center;
+  }
+  header .navheader .navbar-nav {
+    border-top: 3px;
+    border-color: #764B36;
+  }
+  header .navheader .navbar-nav li {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 10px;
+    list-style: none;
+  }
+  header .navheader .navbar-nav li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #764B36;
+  }
+  header .navheader .navbar-nav li a:hover {
+    color: white;
+    transform: scale(1.1);
+  }
   .navbar li {
     font-size: 0.93rem;
   }
