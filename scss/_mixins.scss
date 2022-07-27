@@ -1,0 +1,10 @@
+@mixin h1{
+    display: flex;
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+    color: map-get($estilos, colorPrincipal);
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+}

@@ -31,7 +31,7 @@ body .gridbody .footer {
 /* Comienzo CSS Header */
 header {
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 35% auto;
   grid-template-rows: 50% 50%;
   grid-template-areas: "logoheader tituloheader" "logoheader navheader";
   background-color: rgba(225, 206, 190, 0.5);
@@ -95,123 +95,96 @@ header .navheader .navbar-nav li a:hover {
   flex-direction: column;
 }
 .titulomain h1 {
-  width: 60%;
-  align-self: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   color: #764B36;
-  font-weight: bold;
-  font-size: 4rem;
-  margin: 3rem;
+  font-weight: 1000;
+  font-size: 3.5rem;
+  margin: 2rem;
 }
 .titulomain p {
-  margin-top: 20px;
+  display: flex;
+  justify-self: center;
   width: 80%;
   align-self: center;
   color: black;
   font-size: 2rem;
-  margin: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+.titulomain .frase {
+  font-weight: 600;
+  justify-content: center;
+  font-size: 2.3rem;
+  color: #764B36;
 }
 
 .hrmain {
   width: 50%;
-  margin: 4rem auto;
+  margin: 2.5rem auto;
   background-color: #764B36;
   height: 3px;
 }
 
-.redessocialesmain {
+.redessocialesmain, .fotografiamain, .publicidadmain {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 80%;
   grid-template-areas: "redessocialesimagen redessocialesh2" "redessocialesimagen redessocialesp";
   margin: 7rem;
 }
-.redessocialesmain img {
+.redessocialesmain img, .fotografiamain img, .publicidadmain img {
   grid-area: redessocialesimagen;
   display: flex;
   justify-self: center;
   align-self: center;
 }
-.redessocialesmain h2 {
+.redessocialesmain h2, .fotografiamain h2, .publicidadmain h2 {
   grid-area: redessocialesh2;
   display: flex;
-  justify-self: start;
+  justify-self: center;
   align-self: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #764B36;
 }
-.redessocialesmain p {
+.redessocialesmain p, .fotografiamain p, .publicidadmain p {
   grid-area: redessocialesp;
   display: flex;
   justify-self: center;
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 550;
   color: black;
+  text-align: center;
 }
 
 .publicidadmain {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 80%;
   grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
-  margin: 7rem;
 }
 .publicidadmain img {
   grid-area: publicidadimagen;
-  display: flex;
-  justify-self: center;
-  align-self: center;
 }
 .publicidadmain h2 {
   grid-area: publicidadh2;
-  display: flex;
-  justify-self: end;
-  align-self: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #764B36;
 }
 .publicidadmain p {
   grid-area: publicidadp;
-  display: flex;
-  justify-self: end;
-  align-self: center;
-  font-size: 1.5rem;
-  font-weight: 550;
-  color: black;
 }
 
 .fotografiamain {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 80%;
   grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
-  margin: 7rem;
 }
 .fotografiamain img {
   grid-area: fotografiaimagen;
-  display: flex;
-  justify-self: center;
-  align-self: center;
 }
 .fotografiamain h2 {
   grid-area: fotografiah2;
-  display: flex;
-  justify-self: start;
-  align-self: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #764B36;
 }
 .fotografiamain p {
   grid-area: fotografiap;
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  font-size: 1.5rem;
-  font-weight: 550;
-  color: black;
 }
 
 .logosmain {
@@ -245,23 +218,26 @@ header .navheader .navbar-nav li a:hover {
   font-weight: 600;
 }
 .newslettermain fieldset .inputemail {
-  width: 50%;
+  width: 40%;
   margin-left: 19%;
 }
 .newslettermain fieldset .inputsubmit {
-  width: 10%;
+  width: 15%;
   cursor: pointer;
   background-color: rgba(225, 206, 190, 0.5);
 }
 
 /* Fin CSS Main Index */
 /* Inicio CSS Main Quienes somos */
-.tituloquienessomos {
-  color: #764B36;
+.tituloquienessomos h1 {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  color: #764B36;
+  font-weight: 1000;
+  font-size: 3.5rem;
+  margin: 2rem;
 }
 
 .historia {
@@ -372,6 +348,16 @@ header .navheader .navbar-nav li a:hover {
   justify-content: center;
   margin-bottom: 50px;
 }
+.titulonuestrosservicios h1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #764B36;
+  font-weight: 1000;
+  font-size: 3.5rem;
+  margin: 2rem;
+}
 
 .servicios {
   color: #764B36;
@@ -400,6 +386,16 @@ header .navheader .navbar-nav li a:hover {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 50px;
+}
+.titulotuplan h1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #764B36;
+  font-weight: 1000;
+  font-size: 3.5rem;
+  margin: 2rem;
 }
 
 .planes {
@@ -501,6 +497,16 @@ header .navheader .navbar-nav li a:hover {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 50px;
+}
+.titulocontacto h1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #764B36;
+  font-weight: 1000;
+  font-size: 3.5rem;
+  margin: 2rem;
 }
 
 .listacontacto {
@@ -654,15 +660,15 @@ footer .navfooter li a:hover {
   .hrmain {
     margin: 2.5rem auto;
   }
-  .redessocialesmain img {
+  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
     justify-self: start;
     width: 400px;
     height: 400px;
   }
-  .redessocialesmain p {
+  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
     font-size: 1.4rem;
   }
-  .redessocialesmain {
+  .redessocialesmain, .publicidadmain, .fotografiamain {
     margin-top: 7rem;
     margin-bottom: 7rem;
     margin-left: 4rem;
@@ -771,19 +777,19 @@ footer .navfooter li a:hover {
   }
   /* FIN HEADER */
   /* INDEX */
-  .redessocialesmain img {
+  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
     justify-self: center;
     align-self: center;
     height: 450px;
     width: 450px;
   }
-  .redessocialesmain h2 {
+  .redessocialesmain h2, .publicidadmain h2, .fotografiamain h2 {
     justify-self: center;
   }
-  .redessocialesmain p {
+  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
     font-size: 1.5rem;
   }
-  .redessocialesmain {
+  .redessocialesmain, .publicidadmain, .fotografiamain {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 55% 5% 40%;

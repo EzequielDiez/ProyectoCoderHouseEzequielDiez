@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap');
 @import "variables";
-
+@import "mixins";
 
 *{
     margin: 0;
@@ -37,13 +37,13 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 35% auto;
     grid-template-rows: 50% 50%;
     grid-template-areas: "logoheader tituloheader" "logoheader navheader";
-    background-color: rgb(225, 206, 190, 0.5);
+    background-color: map-get($estilos, colorFondo);
     width:100%;
     border-bottom: 3px solid;
-    border-color: $colorPrincipal;
+    border-color: map-get($estilos, colorPrincipal);
     position: fixed;
     z-index: 1;
     .logoheader{
@@ -66,15 +66,15 @@ header{
         justify-content: end;
         align-items: center;
         padding-right: 1rem;
-        color: $colorPrincipal;
+        color: map-get($estilos, colorPrincipal);
     }
     .navheader{
         grid-area: navheader;
         border-top: 3px solid;
-        border-color: $colorPrincipal;
+        border-color: map-get($estilos, colorPrincipal);
         .navbar-nav{
             border-top: 3px;
-            border-color: $colorPrincipal;
+            border-color: map-get($estilos, colorPrincipal);
             li{
                 font-size: 1.4rem;
                 font-weight: bold;
@@ -83,7 +83,7 @@ header{
                 a{
                     transition: all 0.3s ease 0s;
                     text-decoration: none;
-                    color: $colorPrincipal;
+                    color: map-get($estilos, colorPrincipal);
                     &:hover{
                         color: white;
                         transform: scale(1.1);
@@ -102,27 +102,31 @@ header{
     display: flex;
     flex-direction: column;
     h1{
-        width: 60%;
-        align-self:center;
-        color: $colorPrincipal;
-        font-weight: bold;
-        font-size: 4rem;
-        margin: 3rem;
+        @include h1;
     }
     p{
-        margin-top: 20px;
+        display: flex;
+        justify-self: center;
         width: 80%;
         align-self: center;
         color:black;
         font-size: 2rem;
-        margin:3rem;
+        margin: 2rem;
+        text-align: center;
+    }
+    
+    .frase{
+        font-weight: 600;
+        justify-content: center;
+        font-size: 2.3rem;
+        color: map-get($estilos, colorPrincipal);
     }
 }
 
 .hrmain{
     width: 50%;
-    margin: 4rem auto;
-    background-color: $colorPrincipal;
+    margin: 2.5rem auto;
+    background-color: map-get($estilos, colorPrincipal);
     height: 3px;
 }
 
@@ -141,89 +145,54 @@ header{
     h2{
         grid-area: redessocialesh2;
         display: flex;
-        justify-self: start;
+        justify-self: center;
         align-self: center;
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 600;
-        color: $colorPrincipal;
+        color: map-get($estilos, colorPrincipal);
     }
     p{
         grid-area: redessocialesp;
         display: flex;
         justify-self: center;
         align-self: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 550;
         color: black;
+        text-align: center;
     }
 }
 
 .publicidadmain{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 80%;
+    @extend .redessocialesmain;
     grid-template-areas: "publicidadh2 publicidadimagen" "publicidadp publicidadimagen";
-    margin: 7rem;
     img{
-        grid-area: publicidadimagen;
-        display: flex;
-        justify-self: center;
-        align-self: center;
+        grid-area: publicidadimagen;    
     }
     h2{
         grid-area: publicidadh2;
-        display: flex;
-        justify-self: end;
-        align-self: center;
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: $colorPrincipal;
     }
     p{
-        grid-area: publicidadp;
-        display: flex;
-        justify-self: end;
-        align-self: center;
-        font-size: 1.5rem;
-        font-weight: 550;
-        color: black;
+        grid-area: publicidadp
     }
 }
 
 .fotografiamain{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 80%;
+    @extend .redessocialesmain;
     grid-template-areas: "fotografiaimagen fotografiah2" "fotografiaimagen fotografiap";
-    margin: 7rem;
     img{
-        grid-area: fotografiaimagen;
-        display: flex;
-        justify-self: center;
-        align-self: center;
+        grid-area: fotografiaimagen;    
     }
     h2{
         grid-area: fotografiah2;
-        display: flex;
-        justify-self: start;
-        align-self: center;
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: $colorPrincipal;
     }
     p{
-        grid-area: fotografiap;
-        display: flex;
-        justify-self: center;
-        align-self: center;
-        font-size: 1.5rem;
-        font-weight: 550;
-        color: black;
+        grid-area: fotografiap
     }
 }
 
 .logosmain{
-    background-color: rgb(225, 206, 190, 0.5);
+    background-color: map-get($estilos, colorFondo);
     margin-top: 200px;
     height: 400px;
     display: flex;
@@ -238,7 +207,7 @@ header{
     h2{
         font-size: 50px;
         font-weight: 600;
-        color: $colorPrincipal;
+        color: map-get($estilos, colorPrincipal);
         align-self: center;
         margin-bottom: 50px;
     }
@@ -251,13 +220,13 @@ header{
             font-weight: 600;
         }
         .inputemail{
-            width: 50%;
+            width: 40%;
             margin-left: 19%;
         }
         .inputsubmit{
-            width: 10%;
+            width: 15%;
             cursor: pointer;
-            background-color:rgb(225, 206, 190, 0.5);
+            background-color:map-get($estilos, colorFondo);
         }
     }
 }
@@ -267,15 +236,13 @@ header{
 /* Inicio CSS Main Quienes somos */
 
 .tituloquienessomos{
-    color: $colorPrincipal;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 50px;
+    h1{
+        @include h1;
+    }
 }
 
 .historia{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: column;
     margin-left: 7%;
@@ -314,7 +281,7 @@ header{
 
 .perfil1 h2{
     font-size: 30px;
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
 }
 
 .perfil1 p{
@@ -356,7 +323,7 @@ header{
 
 .perfil2 h2{
     font-size: 30px;
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
 }
 
 .perfil2 p{
@@ -378,15 +345,18 @@ header{
 /* Inicio CSS Main Nuestros servicios */
 
 .titulonuestrosservicios{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 50px;
+    h1{
+        @include h1;
+    }
 }
 
 .servicios{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: column;
     margin-left: 7%;
@@ -409,15 +379,18 @@ header{
 /* Inicio CSS Main Nuestros planes */
 
 .titulotuplan{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 50px;
+    h1{
+        @include h1;
+    }
 }
 
 .planes{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -441,7 +414,7 @@ header{
 }
 
 .armatuplan{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -453,7 +426,7 @@ header{
 .checkbox{
     font-size: 30px;
     font-weight: 600;
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -494,7 +467,7 @@ header{
     flex-direction: row;
     align-self: center;
     justify-content: center;
-    background-color: rgb(225, 206, 190, 0.5);
+    background-color: map-get($estilos, colorFondo);
     cursor: pointer;
 }
 
@@ -514,11 +487,14 @@ header{
 /* Inicio CSS Main Contacto */
 
 .titulocontacto{
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 50px;
+    h1{
+        @include h1;
+    }
 }
 
 .listacontacto{
@@ -537,7 +513,7 @@ header{
 .listacontacto li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
 }
 
 .listacontacto li a:hover{
@@ -552,7 +528,7 @@ header{
 }
 
 div iframe{
-    border-color: $colorPrincipal;
+    border-color: map-get($estilos, colorPrincipal);
     border-radius: 5%;
 }
 
@@ -563,20 +539,20 @@ div iframe{
 
 .footer h4{
     grid-area: h4footer;
-    color: $colorPrincipal;
+    color: map-get($estilos, colorPrincipal);
     font-size: 20px;
     font-weight: 600;
 }
 
 footer {
-    background-color: rgb(225, 206, 190, 0.5);
+    background-color: map-get($estilos, colorFondo);
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-template-rows: 35% 20% 35% 10%;
     grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
     width:100%;
     border-top: 3px solid;
-    border-color: $colorPrincipal;
+    border-color: map-get($estilos, colorPrincipal);
     div .logofooter{
         align-self: flex-end;
     }
@@ -595,7 +571,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $colorPrincipal;
+        color: map-get($estilos, colorPrincipal);
         font-size: 30px;
         font-weight: 600;
     }
@@ -633,7 +609,7 @@ footer {
             a{
                 transition: all 0.3s ease 0s;
                 text-decoration: none;
-                color: $colorPrincipal;
+                color: map-get($estilos, colorPrincipal);
                 &:hover{
                     color: white;
                 }
@@ -644,384 +620,4 @@ footer {
 
 /* Fin CSS Footer */
 
-@media screen and (max-width: 1400px){
-
-    .gridbody {
-        grid-template-rows: 110px auto 200px;
-    }
-
-/* HEADER */
-
-    .logoheader{
-        width: 110px;
-        height: 110px;
-    }
-
-    .logoheaderimg {
-        width: 110px;
-        height: 110px;
-    }
-
-    .tituloheader{
-        font-size: 2rem;
-    }
-
-    .navbar li{
-        font-size: 1rem;
-        padding: 0.3rem;
-    }
-
-/* FIN HEADER */
-
-/* INDEX */
-
-    .titulomain h1{
-        font-size: 2.3rem;
-        margin: 1rem;
-    }
-
-    .titulomain p{
-        font-size: 1.5rem;
-        margin: 1rem;
-    }
-
-    .hrmain{
-        margin: 2.5rem auto;
-    }
-
-    .redessocialesmain img{
-        justify-self: start;
-        width: 400px;
-        height: 400px;
-    }
-
-    .redessocialesmain p{
-        font-size: 1.4rem;
-    }
-
-    .redessocialesmain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .publicidadmain img{
-        justify-self: end;
-        width: 400px;
-        height: 400px;
-    }
-
-    .publicidadmain p{
-        font-size: 1.4rem;
-    }
-
-    .publicidadmain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .fotografiamain img{
-        justify-self: start;
-        width: 400px;
-        height: 400px;
-    }
-
-    .fotografiamain p{
-        font-size: 1.4rem;
-    }
-
-    .fotografiamain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .logosmain{
-        height: 250px;
-    }
-
-    .logosmain img{
-        height: 200px;
-        width: 200px;
-    }
-
-    .newslettermain{
-        margin: 8rem;
-    }
-
-    .newslettermain h2{
-        font-size: 2.5rem;
-    }
-
-    .newslettermain fieldset input{
-        padding: 15px;
-    }
-
-    .inputemail{
-        width: 45%;
-    }
-
-    .inputsubmit{
-        width: 15%;
-    }
-
-/* FIN INDEX */
-
-/* FOOTER */
-
-    .footer h3{
-        font-size: 1.8rem;
-    }
-
-    .footer h4{
-        font-size: 1.2rem;
-    }
-
-    footer {
-        grid-template-columns: 15% auto 15%;
-    }
-
-    .logofooterimg {
-        width: 120px;
-        height: 120px;
-    }
-
-    .navfooter li{
-        font-size: 1rem;
-    }
-
-    .navfooter li a:hover{
-        color: white;
-    }
-
-    .redesfooter a img{
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .botonirarriba img{
-        width: 2rem;
-        height: 2rem;
-    }
-
-/* FIN FOOTER */
-
-}
-
-@media screen and (max-width: 1200px){
-
-    .gridbody {
-        grid-template-rows: 130px auto 200px;
-    }
-    
-/* HEADER */
-        
-    .logoheader{
-        width: 130px;
-        height: 130px;
-    }
-    
-    .logoheaderimg {
-        width: 130px;
-        height: 130px;
-    }
-    
-    .tituloheader{
-        font-size: 2.5rem;
-    }
-    
-    .navbar li{
-        font-size: 1rem;
-        padding: 0.3rem;
-    }
-            
-/* FIN HEADER */
-
-/* INDEX */
-
-.redessocialesmain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
-}
-
-.redessocialesmain h2{
-    justify-self: center;
-}
-
-.redessocialesmain p{
-    font-size: 1.5rem;
-}
-
-.redessocialesmain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
-    gap: 1.5rem;
-    margin: 7rem;    
-}
-
-.publicidadmain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
-}
-
-.publicidadmain h2{
-    justify-self: center;
-}
-
-.publicidadmain p{
-    justify-self: center;
-    font-size: 1.5rem;
-}
-
-.publicidadmain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas:  "publicidadimagen" "publicidadh2" "publicidadp";
-    gap: 1.5rem;
-    margin: 7rem;
-}
-
-.fotografiamain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
-}
-
-.fotografiamain h2{
-    justify-self: center;
-}
-
-.fotografiamain p{
-    justify-self: center;
-    font-size: 1.5rem;
-}
-
-.fotografiamain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
-    gap: 1.5rem;
-    margin: 7rem;
-}
-
-.logosmain{
-    margin-top: 10rem;
-    height: 300px;
-}
-
-.newslettermain{
-    margin: 10rem;
-}
-
-.newslettermain h2{
-    font-size: 2.1rem;
-}
-
-.newslettermain fieldset input{
-    padding: 12px;
-}
-
-.inputemail{
-    width: 50%;
-    margin-left: 19%;
-}
-
-.inputsubmit{
-    width: 20%;
-}
-
-/* FIN INDEX */
-
-/* FOOTER */
-
-    .footer h3{
-        font-size: 1.8rem;
-    }
-
-    .footer h4{
-        font-size: 1.2rem;
-    }
-
-    footer {
-        grid-template-columns: 10% auto 10%;
-        grid-template-rows: 35% 25% 30% 10%;
-    }
-
-    .logofooterimg {
-        width: 120px;
-        height: 120px;
-    }
-
-    .redesfooter a img{
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .botonirarriba img{
-        width: 2rem;
-        height: 2rem;
-    }
-
-/* FIN FOOTER */
-
-}
-
-@media screen and (max-width: 991px){
-    
-    header{
-        grid-template-columns: 15% auto 10%;
-        grid-template-rows: 100%;
-        grid-template-areas: "logoheader tituloheader navheader";
-        .tituloheader{
-            font-size: 2.7rem;
-            justify-content: center;
-            padding-right: 0;
-        }
-        .navheader{
-            border: 0;
-            align-self: center;
-            .navbar-nav{
-                border-top: 3px;
-                border-color: $colorPrincipal;
-                li{
-                    font-size: 1.4rem;
-                    font-weight: bold;
-                    padding: 10px;
-                    list-style: none;
-                    a{
-                        transition: all 0.3s ease 0s;
-                        text-decoration: none;
-                        color: $colorPrincipal;
-                        &:hover{
-                            color: white;
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-
-    .navbar li{
-        font-size: 0.93rem;
-    }
-
-    .tituloheader{
-        font-size: 2.5rem;
-    }
-}
+@import "mediaqueries";
