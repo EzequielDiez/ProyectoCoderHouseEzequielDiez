@@ -140,6 +140,8 @@ header .navheader .navbar-nav li a:hover {
   display: flex;
   justify-self: center;
   align-self: center;
+  width: 600px;
+  height: 600px;
 }
 .redessocialesmain h2, .fotografiamain h2, .publicidadmain h2 {
   grid-area: redessocialesh2;
