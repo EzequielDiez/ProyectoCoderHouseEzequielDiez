@@ -31,7 +31,7 @@ body .gridbody .footer {
 /* Comienzo CSS Header */
 header {
   display: grid;
-  grid-template-columns: 35% auto;
+  grid-template-columns: 15% auto;
   grid-template-rows: 50% 50%;
   grid-template-areas: "logoheader tituloheader" "logoheader navheader";
   background-color: rgba(225, 206, 190, 0.5);
@@ -73,7 +73,7 @@ header .navheader .navbar-nav {
   border-color: #764B36;
 }
 header .navheader .navbar-nav li {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: bold;
   padding: 10px;
   list-style: none;
@@ -142,6 +142,10 @@ header .navheader .navbar-nav li a:hover {
   align-self: center;
   width: 600px;
   height: 600px;
+  transition: all 0.3s ease 0s;
+}
+.redessocialesmain img:hover, .fotografiamain img:hover, .publicidadmain img:hover {
+  transform: scale(1.1);
 }
 .redessocialesmain h2, .fotografiamain h2, .publicidadmain h2 {
   grid-area: redessocialesh2;
@@ -197,6 +201,12 @@ header .navheader .navbar-nav li a:hover {
   justify-content: space-around;
   align-items: center;
 }
+.logosmain img {
+  transition: all 0.3s ease 0s;
+}
+.logosmain img:hover {
+  transform: scale(1.4);
+}
 
 .newslettermain {
   margin: 16rem;
@@ -227,6 +237,10 @@ header .navheader .navbar-nav li a:hover {
   width: 15%;
   cursor: pointer;
   background-color: rgba(225, 206, 190, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.newslettermain fieldset .inputsubmit:hover {
+  transform: scale(0.93);
 }
 
 /* Fin CSS Main Index */
@@ -547,28 +561,20 @@ div iframe {
 
 /* Fin CSS Main Contacto */
 /* Inicio CSS Footer */
-.footer h4 {
-  grid-area: h4footer;
-  color: #764B36;
-  font-size: 20px;
-  font-weight: 600;
-}
-
 footer {
   background-color: rgba(225, 206, 190, 0.5);
   display: grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: 10% auto 10%;
   grid-template-rows: 35% 20% 35% 10%;
   grid-template-areas: "logofooter h3footer botonfooter" "logofooter navfooter botonfooter" "logofooter redesfooter botonfooter" "h4footer h4footer botonfooter";
   width: 100%;
   border-top: 3px solid;
   border-color: #764B36;
 }
-footer div .logofooter {
-  align-self: flex-end;
-}
 footer .logofooter {
   grid-area: logofooter;
+  display: flex;
+  align-items: flex-end;
 }
 footer .logofooter .logofooterimg {
   width: 150px;
@@ -605,8 +611,12 @@ footer .botonirarriba {
   align-items: center;
 }
 footer .botonirarriba img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+footer .botonirarriba img:hover {
+  transform: scale(1.1);
 }
 footer .navfooter {
   grid-area: navfooter;
@@ -627,304 +637,614 @@ footer .navfooter li a {
 footer .navfooter li a:hover {
   color: white;
 }
+footer h4 {
+  grid-area: h4footer;
+  color: #764B36;
+  font-size: 20px;
+  font-weight: 600;
+}
 
 /* Fin CSS Footer */
 @media screen and (max-width: 1400px) {
-  .gridbody {
-    grid-template-rows: 110px auto 200px;
+  body .gridbody {
+    grid-template-rows: 110px auto 150px;
+    gap: 40px;
   }
   /* HEADER */
-  .logoheader {
+  header .logoheader {
+    grid-area: logoheader;
     width: 110px;
     height: 110px;
   }
-  .logoheaderimg {
+  header .logoheader .logoheaderimg {
     width: 110px;
     height: 110px;
+    cursor: pointer;
   }
-  .tituloheader {
+  header .tituloheader {
     font-size: 2rem;
+    padding-right: 1rem;
   }
-  .navbar li {
+  header .navheader .navbar-nav li {
     font-size: 1rem;
-    padding: 0.3rem;
+    padding: 5px;
   }
   /* FIN HEADER */
   /* INDEX */
   .titulomain h1 {
-    font-size: 2.3rem;
-    margin: 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.5rem;
+    margin: 0.7rem;
   }
   .titulomain p {
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0.7rem;
+  }
+  .titulomain .frase {
+    font-size: 1.7rem;
   }
   .hrmain {
-    margin: 2.5rem auto;
-  }
-  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
-    justify-self: start;
-    width: 400px;
-    height: 400px;
-  }
-  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
-    font-size: 1.4rem;
+    margin: 2rem auto;
   }
   .redessocialesmain, .publicidadmain, .fotografiamain {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin: 7rem;
   }
-  .publicidadmain img {
-    justify-self: end;
-    width: 400px;
-    height: 400px;
-  }
-  .publicidadmain p {
-    font-size: 1.4rem;
-  }
-  .publicidadmain {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-  .fotografiamain img {
-    justify-self: start;
-    width: 400px;
-    height: 400px;
-  }
-  .fotografiamain p {
-    font-size: 1.4rem;
-  }
-  .fotografiamain {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-  .logosmain {
-    height: 250px;
-  }
-  .logosmain img {
-    height: 200px;
-    width: 200px;
-  }
-  .newslettermain {
-    margin: 8rem;
-  }
-  .newslettermain h2 {
-    font-size: 2.5rem;
-  }
-  .newslettermain fieldset input {
-    padding: 15px;
-  }
-  .inputemail {
-    width: 45%;
-  }
-  .inputsubmit {
-    width: 15%;
-  }
-  /* FIN INDEX */
-  /* FOOTER */
-  .footer h3 {
-    font-size: 1.8rem;
-  }
-  .footer h4 {
-    font-size: 1.2rem;
-  }
-  footer {
-    grid-template-columns: 15% auto 15%;
-  }
-  .logofooterimg {
-    width: 120px;
-    height: 120px;
-  }
-  .navfooter li {
-    font-size: 1rem;
-  }
-  .navfooter li a:hover {
-    color: white;
-  }
-  .redesfooter a img {
-    width: 2rem;
-    height: 2rem;
-  }
-  .botonirarriba img {
-    width: 2rem;
-    height: 2rem;
-  }
-  /* FIN FOOTER */
-}
-@media screen and (max-width: 1200px) {
-  .gridbody {
-    grid-template-rows: 130px auto 200px;
-  }
-  /* HEADER */
-  .logoheader {
-    width: 130px;
-    height: 130px;
-  }
-  .logoheaderimg {
-    width: 130px;
-    height: 130px;
-  }
-  .tituloheader {
-    font-size: 2.5rem;
-  }
-  .navbar li {
-    font-size: 1rem;
-    padding: 0.3rem;
-  }
-  /* FIN HEADER */
-  /* INDEX */
   .redessocialesmain img, .publicidadmain img, .fotografiamain img {
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
+    width: 400px;
+    height: 400px;
   }
   .redessocialesmain h2, .publicidadmain h2, .fotografiamain h2 {
-    justify-self: center;
+    font-size: 2rem;
+    font-weight: 600;
   }
   .redessocialesmain p, .publicidadmain p, .fotografiamain p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 550;
   }
-  .redessocialesmain, .publicidadmain, .fotografiamain {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
-    gap: 1.5rem;
+  .publicidadmain {
     margin: 7rem;
   }
   .publicidadmain img {
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
+    width: 400px;
+    height: 400px;
   }
   .publicidadmain h2 {
-    justify-self: center;
+    font-size: 2rem;
+    font-weight: 600;
   }
   .publicidadmain p {
-    justify-self: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 550;
   }
-  .publicidadmain {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "publicidadimagen" "publicidadh2" "publicidadp";
-    gap: 1.5rem;
+  .fotografiamain {
     margin: 7rem;
   }
   .fotografiamain img {
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
+    width: 400px;
+    height: 400px;
   }
   .fotografiamain h2 {
-    justify-self: center;
+    font-size: 2rem;
+    font-weight: 600;
   }
   .fotografiamain p {
-    justify-self: center;
-    font-size: 1.5rem;
-  }
-  .fotografiamain {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
-    gap: 1.5rem;
-    margin: 7rem;
+    font-size: 1.4rem;
+    font-weight: 550;
   }
   .logosmain {
-    margin-top: 10rem;
-    height: 300px;
+    margin-top: 5rem;
+    height: 220px;
+  }
+  .logosmain img {
+    height: 180px;
+    width: 180px;
   }
   .newslettermain {
     margin: 10rem;
   }
   .newslettermain h2 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
   }
   .newslettermain fieldset input {
-    padding: 12px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    justify-content: center;
   }
-  .inputemail {
-    width: 50%;
-    margin-left: 19%;
+  .newslettermain fieldset .inputemail {
+    width: 40%;
   }
-  .inputsubmit {
-    width: 20%;
+  .newslettermain fieldset .inputsubmit {
+    width: 15%;
   }
   /* FIN INDEX */
   /* FOOTER */
-  .footer h3 {
-    font-size: 1.8rem;
-  }
-  .footer h4 {
-    font-size: 1.2rem;
-  }
   footer {
+    display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 35% 25% 30% 10%;
+    grid-template-rows: 30% 20% 35% 15%;
   }
-  .logofooterimg {
-    width: 120px;
-    height: 120px;
+  footer .logofooter {
+    display: flex;
+    align-items: flex-end;
   }
-  .redesfooter a img {
-    width: 2rem;
-    height: 2rem;
+  footer .logofooter .logofooterimg {
+    width: 110px;
+    height: 110px;
   }
-  .botonirarriba img {
-    width: 2rem;
-    height: 2rem;
+  footer h3 {
+    font-size: 1.4rem;
+    padding: 0.1rem;
+    margin: 0%;
+  }
+  footer .redesfooter a img {
+    width: 30px;
+    height: 30px;
+    margin: 7px;
+  }
+  footer .botonirarriba img {
+    width: 30px;
+    height: 30px;
+  }
+  footer .navfooter li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    align-self: center;
+  }
+  footer h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  /* FIN FOOTER */
+}
+@media screen and (max-width: 1200px) {
+  body .gridbody {
+    grid-template-rows: 100px auto 130px;
+    gap: 35px;
+  }
+  /* HEADER */
+  header .logoheader {
+    width: 100px;
+    height: 100px;
+  }
+  header .logoheader .logoheaderimg {
+    width: 110px;
+    height: 110px;
+  }
+  header .tituloheader {
+    font-size: 1.8rem;
+    padding-right: 1rem;
+  }
+  header .navheader .navbar-nav li {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+  /* FIN HEADER */
+  /* INDEX */
+  .titulomain h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.3rem;
+    margin: 0.5rem;
+  }
+  .titulomain p {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+  }
+  .titulomain .frase {
+    font-size: 1.5rem;
+  }
+  .hrmain {
+    margin: 1.5rem auto;
+  }
+  .redessocialesmain, .publicidadmain, .fotografiamain {
+    margin: 4rem;
+  }
+  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
+    width: 350px;
+    height: 350px;
+  }
+  .redessocialesmain h2, .publicidadmain h2, .fotografiamain h2 {
+    font-size: 1.7rem;
+  }
+  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
+    font-size: 1.25rem;
+  }
+  .publicidadmain {
+    margin: 5rem;
+  }
+  .publicidadmain img {
+    width: 350px;
+    height: 350px;
+  }
+  .publicidadmain h2 {
+    font-size: 1.7rem;
+  }
+  .publicidadmain p {
+    font-size: 1.25rem;
+  }
+  .fotografiamain {
+    margin: 4rem;
+  }
+  .fotografiamain img {
+    width: 350px;
+    height: 350px;
+  }
+  .fotografiamain h2 {
+    font-size: 1.7rem;
+  }
+  .fotografiamain p {
+    font-size: 1.25rem;
+  }
+  .logosmain {
+    margin-top: 10rem;
+    height: 200px;
+  }
+  .logosmain img {
+    height: 150px;
+    width: 150px;
+  }
+  .newslettermain {
+    margin: 8rem;
+  }
+  .newslettermain h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .newslettermain fieldset input {
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+  .newslettermain fieldset .inputemail {
+    width: 40%;
+  }
+  .newslettermain fieldset .inputsubmit {
+    width: 15%;
+  }
+  /* FIN INDEX */
+  /* FOOTER */
+  footer .logofooter .logofooterimg {
+    width: 90px;
+    height: 90px;
+  }
+  footer h3 {
+    font-size: 1.3rem;
+    padding: 0.1rem;
+  }
+  footer .redesfooter a img {
+    width: 25px;
+    height: 25px;
+    margin: 6px;
+  }
+  footer .botonirarriba img {
+    width: 25px;
+    height: 25px;
+  }
+  footer .navfooter li {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  footer h4 {
+    font-size: 0.9rem;
   }
   /* FIN FOOTER */
 }
 @media screen and (max-width: 991px) {
+  body .gridbody {
+    grid-template-rows: 100px auto 90px;
+    gap: 20px;
+  }
+  /* HEADER */
   header {
-    grid-template-columns: 15% auto 10%;
+    grid-template-columns: 10% auto 10%;
     grid-template-rows: 100%;
     grid-template-areas: "logoheader tituloheader navheader";
   }
+  header .logoheader {
+    width: 80px;
+    height: 80px;
+  }
+  header .logoheader .logoheaderimg {
+    width: 80px;
+    height: 80px;
+  }
   header .tituloheader {
-    font-size: 2.7rem;
+    font-size: 2rem;
     justify-content: center;
-    padding-right: 0;
   }
   header .navheader {
     border: 0;
     align-self: center;
   }
-  header .navheader .navbar-nav {
-    border-top: 3px;
-    border-color: #764B36;
-  }
   header .navheader .navbar-nav li {
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 10px;
-    list-style: none;
+    font-size: 1rem;
   }
-  header .navheader .navbar-nav li a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
+  /* FIN HEADER */
+  /* INDEX */
+  .titulomain h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     color: #764B36;
-  }
-  header .navheader .navbar-nav li a:hover {
-    color: white;
-    transform: scale(1.1);
-  }
-  .navbar li {
-    font-size: 0.93rem;
-  }
-  .tituloheader {
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
     font-size: 2.5rem;
+    margin: 1rem;
+  }
+  .titulomain p {
+    font-size: 1.5rem;
+    margin: 0.6rem;
+  }
+  .titulomain .frase {
+    font-size: 1.7rem;
+  }
+  .hrmain {
+    margin: 2rem auto;
+  }
+  .redessocialesmain, .publicidadmain, .fotografiamain {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 10% 30%;
+    grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
+    gap: 1.5rem;
+    margin: 5rem;
+  }
+  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
+    width: 400px;
+    height: 400px;
+  }
+  .redessocialesmain h2, .publicidadmain h2, .fotografiamain h2 {
+    font-size: 2.3rem;
+  }
+  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
+    font-size: 1.3rem;
+  }
+  .publicidadmain {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 10% 30%;
+    grid-template-areas: "publicidadimagen" "publicidadh2" "publicidadp";
+    gap: 1.5rem;
+    margin: 5rem;
+  }
+  .publicidadmain img {
+    width: 400px;
+    height: 400px;
+  }
+  .publicidadmain h2 {
+    font-size: 2.3rem;
+  }
+  .publicidadmain p {
+    font-size: 1.3rem;
+  }
+  .fotografiamain {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 10% 30%;
+    grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
+    gap: 1.5rem;
+    margin: 5rem;
+  }
+  .fotografiamain img {
+    width: 400px;
+    height: 400px;
+  }
+  .fotografiamain h2 {
+    font-size: 2.3rem;
+  }
+  .fotografiamain p {
+    font-size: 1.3rem;
+  }
+  .logosmain {
+    margin-top: 7rem;
+    height: 180px;
+  }
+  .logosmain img {
+    height: 130px;
+    width: 130px;
+  }
+  .newslettermain {
+    margin: 5rem;
+  }
+  .newslettermain h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .newslettermain fieldset input {
+    padding: 0.2rem;
+    font-size: 1rem;
+  }
+  .newslettermain fieldset .inputemail {
+    width: 40%;
+  }
+  .newslettermain fieldset .inputsubmit {
+    width: 17%;
+  }
+  /* FIN INDEX */
+  /* FOOTER */
+  footer {
+    grid-template-rows: 40% 40% 20%;
+    grid-template-areas: "logofooter h3footer botonfooter" "logofooter redesfooter botonfooter" "h4footer h4footer botonfooter";
+  }
+  footer .logofooter .logofooterimg {
+    width: 70px;
+    height: 70px;
+  }
+  footer h3 {
+    font-size: 1.2rem;
+    padding: 0.1rem;
+  }
+  footer .redesfooter a img {
+    width: 25px;
+    height: 25px;
+    margin: 6px;
+  }
+  footer .botonirarriba img {
+    width: 25px;
+    height: 25px;
+  }
+  footer .navfooter {
+    grid-area: navfooter;
+    display: none;
+  }
+  footer h4 {
+    font-size: 0.9rem;
+  }
+  /* FIN FOOTER */
+}
+@media screen and (max-width: 767px) {
+  body .gridbody {
+    grid-template-rows: 80px auto 90px;
+    gap: 20px;
+  }
+  /* HEADER */
+  header .logoheader {
+    width: 70px;
+    height: 70px;
+  }
+  header .logoheader .logoheaderimg {
+    width: 70px;
+    height: 70px;
+  }
+  header .tituloheader {
+    font-size: 1.7rem;
+  }
+  /* FIN HEADER */
+  /* INDEX */
+  .titulomain h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.1rem;
+    margin: 0.7rem;
+  }
+  .titulomain p {
+    font-size: 1.4rem;
+    margin: 0.2rem;
+  }
+  .titulomain .frase {
+    font-size: 1.4rem;
+  }
+  .hrmain {
+    margin: 1.2rem auto;
+  }
+  .redessocialesmain, .publicidadmain, .fotografiamain {
+    gap: 1.5rem;
+    margin: 4rem;
+  }
+  .redessocialesmain img, .publicidadmain img, .fotografiamain img {
+    width: 400px;
+    height: 400px;
+  }
+  .redessocialesmain h2, .publicidadmain h2, .fotografiamain h2 {
+    font-size: 2rem;
+  }
+  .redessocialesmain p, .publicidadmain p, .fotografiamain p {
+    font-size: 1.2rem;
+  }
+  .publicidadmain {
+    gap: 1.5rem;
+    margin: 4rem;
+  }
+  .publicidadmain img {
+    width: 400px;
+    height: 400px;
+  }
+  .publicidadmain h2 {
+    font-size: 2rem;
+  }
+  .publicidadmain p {
+    font-size: 1.2rem;
+  }
+  .fotografiamain {
+    gap: 1.5rem;
+    margin: 4rem;
+  }
+  .fotografiamain img {
+    width: 400px;
+    height: 400px;
+  }
+  .fotografiamain h2 {
+    font-size: 2rem;
+  }
+  .fotografiamain p {
+    font-size: 1.2rem;
+  }
+  .logosmain {
+    margin-top: 6rem;
+    height: 160px;
+  }
+  .logosmain img {
+    height: 120px;
+    width: 120px;
+  }
+  .newslettermain {
+    margin: 4rem;
+  }
+  .newslettermain h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .newslettermain fieldset input {
+    padding: 0.2rem;
+    font-size: 1rem;
+  }
+  .newslettermain fieldset .inputemail {
+    width: 50%;
+  }
+  .newslettermain fieldset .inputsubmit {
+    width: 25%;
+  }
+  /* FIN INDEX */
+  /* FOOTER */
+  footer {
+    grid-template-rows: 40% 40% 20%;
+    grid-template-areas: "logofooter h3footer botonfooter" "logofooter redesfooter botonfooter" "h4footer h4footer botonfooter";
+  }
+  footer .logofooter .logofooterimg {
+    width: 70px;
+    height: 70px;
+  }
+  footer h3 {
+    font-size: 1.2rem;
+    padding: 0.1rem;
+  }
+  footer .redesfooter a img {
+    width: 25px;
+    height: 25px;
+    margin: 6px;
+  }
+  footer .botonirarriba img {
+    width: 25px;
+    height: 25px;
+  }
+  footer .navfooter {
+    grid-area: navfooter;
+    display: none;
+  }
+  footer h4 {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

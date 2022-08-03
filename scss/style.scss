@@ -37,7 +37,7 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 35% auto;
+    grid-template-columns: 15% auto;
     grid-template-rows: 50% 50%;
     grid-template-areas: "logoheader tituloheader" "logoheader navheader";
     background-color: map-get($estilos, colorFondo);
@@ -76,7 +76,7 @@ header{
             border-top: 3px;
             border-color: map-get($estilos, colorPrincipal);
             li{
-                font-size: 1.4rem;
+                font-size: 1.35rem;
                 font-weight: bold;
                 padding: 10px;
                 list-style: none;
@@ -143,6 +143,10 @@ header{
         align-self: center;
         width: 600px;
         height: 600px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
     h2{
         grid-area: redessocialesh2;
@@ -200,6 +204,12 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    img{
+        transition: all 0.3s ease 0s;
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
 }
 
 .newslettermain{
@@ -229,6 +239,10 @@ header{
             width: 15%;
             cursor: pointer;
             background-color:map-get($estilos, colorFondo);
+            transition: all 0.3s ease 0s;
+            &:hover{
+            transform: scale(0.93);
+            }
         }
     }
 }
@@ -539,27 +553,19 @@ div iframe{
 
 /* Inicio CSS Footer */
 
-.footer h4{
-    grid-area: h4footer;
-    color: map-get($estilos, colorPrincipal);
-    font-size: 20px;
-    font-weight: 600;
-}
-
 footer {
     background-color: map-get($estilos, colorFondo);
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 10% auto 10%;
     grid-template-rows: 35% 20% 35% 10%;
     grid-template-areas: "logofooter h3footer botonfooter""logofooter navfooter botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
     width:100%;
     border-top: 3px solid;
     border-color: map-get($estilos, colorPrincipal);
-    div .logofooter{
-        align-self: flex-end;
-    }
     .logofooter{
         grid-area: logofooter;
+        display: flex;
+        align-items: flex-end;
         .logofooterimg {
             width: 150px;
             height: 150px;
@@ -595,10 +601,15 @@ footer {
         justify-content: center;
         align-items: center;
         img{
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease 0s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
+
     .navfooter{
         grid-area: navfooter;
         display: flex;
@@ -617,6 +628,12 @@ footer {
                 }
             }
         }
+    }
+    h4{
+        grid-area: h4footer;
+        color: map-get($estilos, colorPrincipal);
+        font-size: 20px;
+        font-weight: 600;
     }
 }
 

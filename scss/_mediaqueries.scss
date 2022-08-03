@@ -1,337 +1,359 @@
 @media screen and (max-width: 1400px){
 
-    .gridbody {
-        grid-template-rows: 110px auto 200px;
+    body{
+        .gridbody {
+            grid-template-rows: 110px auto 150px;
+            gap: 40px;
+        }
     }
-
 /* HEADER */
 
+header{
     .logoheader{
+        grid-area: logoheader;
         width: 110px;
         height: 110px;
+        .logoheaderimg {
+            width: 110px;
+            height: 110px;
+            cursor: pointer;
+        }
     }
-
-    .logoheaderimg {
-        width: 110px;
-        height: 110px;
-    }
-
     .tituloheader{
         font-size: 2rem;
+        padding-right: 1rem;
     }
-
-    .navbar li{
-        font-size: 1rem;
-        padding: 0.3rem;
+    .navheader{
+        .navbar-nav{
+            li{
+                font-size: 1rem;
+                padding: 5px;
+            }
+        }
     }
+}
 
 /* FIN HEADER */
 
 /* INDEX */
 
-    .titulomain h1{
-        font-size: 2.3rem;
-        margin: 1rem;
+.titulomain{
+    h1{
+        @include h1;
+        font-size:2.5rem;
+        margin: 0.7rem;
     }
-
-    .titulomain p{
+    p{
         font-size: 1.5rem;
-        margin: 1rem;
+        margin: 0.7rem;
     }
-
+    
+    .frase{
+        font-size: 1.7rem;
+    }
+}
     .hrmain{
-        margin: 2.5rem auto;
-    }
-
-    .redessocialesmain img{
-        justify-self: start;
-        width: 400px;
-        height: 400px;
-    }
-
-    .redessocialesmain p{
-        font-size: 1.4rem;
+        margin: 2rem auto;
     }
 
     .redessocialesmain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .publicidadmain img{
-        justify-self: end;
-        width: 400px;
-        height: 400px;
-    }
-
-    .publicidadmain p{
-        font-size: 1.4rem;
+        margin: 7rem;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 1.4rem;
+            font-weight: 550;
+        }
     }
 
     .publicidadmain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .fotografiamain img{
-        justify-self: start;
-        width: 400px;
-        height: 400px;
-    }
-
-    .fotografiamain p{
-        font-size: 1.4rem;
+        margin: 7rem;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 1.4rem;
+            font-weight: 550;
+        }
     }
 
     .fotografiamain{
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin: 7rem;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 1.4rem;
+            font-weight: 550;
+        }
     }
 
     .logosmain{
-        height: 250px;
-    }
-
-    .logosmain img{
-        height: 200px;
-        width: 200px;
+        margin-top: 5rem;
+        height: 220px;
+        img{
+            height: 180px;
+            width: 180px;
+        }
     }
 
     .newslettermain{
-        margin: 8rem;
-    }
-
-    .newslettermain h2{
-        font-size: 2.5rem;
-    }
-
-    .newslettermain fieldset input{
-        padding: 15px;
-    }
-
-    .inputemail{
-        width: 45%;
-    }
-
-    .inputsubmit{
-        width: 15%;
+        margin: 10rem;
+        h2{
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        fieldset{
+            input{
+                padding: 0.5rem;
+                font-size: 1rem;
+                justify-content: center;
+            }
+            .inputemail{
+                width: 40%;
+            }
+            .inputsubmit{
+                width: 15%;
+            }
+        }
     }
 
 /* FIN INDEX */
 
 /* FOOTER */
 
-    .footer h3{
-        font-size: 1.8rem;
+footer {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 30% 20% 35% 15%;
+    .logofooter{
+        display: flex;
+        align-items: flex-end;
+        .logofooterimg {
+            width: 110px;
+            height: 110px;
+        }
     }
-
-    .footer h4{
-        font-size: 1.2rem;
+    h3{
+        font-size: 1.4rem;
+        padding: 0.1rem;
+        margin: 0%;
     }
-
-    footer {
-        grid-template-columns: 15% auto 15%;
+    .redesfooter{
+        a img{
+            width: 30px;
+            height: 30px;
+            margin: 7px
+        }
     }
-
-    .logofooterimg {
-        width: 120px;
-        height: 120px;
+    .botonirarriba{
+        img{
+            width: 30px;
+            height: 30px;
+        }
     }
-
-    .navfooter li{
+    .navfooter{
+        li{
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            align-self: center;
+        }
+    }
+    h4{
         font-size: 1rem;
+        font-weight: 600;
     }
-
-    .navfooter li a:hover{
-        color: white;
-    }
-
-    .redesfooter a img{
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .botonirarriba img{
-        width: 2rem;
-        height: 2rem;
-    }
+}
 
 /* FIN FOOTER */
 
 }
 
 
-
-
-
 @media screen and (max-width: 1200px){
+    
+    body{
+        .gridbody {
+            grid-template-rows: 100px auto 130px;
+            gap: 35px;
+        }
+    }
 
-    .gridbody {
-        grid-template-rows: 130px auto 200px;
-    }
-    
 /* HEADER */
-        
+
+header{
     .logoheader{
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
+        .logoheaderimg {
+            width: 110px;
+            height: 110px;
+        }
     }
-    
-    .logoheaderimg {
-        width: 130px;
-        height: 130px;
-    }
-    
     .tituloheader{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        padding-right: 1rem;
     }
-    
-    .navbar li{
-        font-size: 1rem;
-        padding: 0.3rem;
+    .navheader{
+        .navbar-nav{
+            li{
+                font-size: 0.9rem;
+                padding: 5px;
+            }
+        }
     }
-            
+}
+
 /* FIN HEADER */
 
 /* INDEX */
 
-.redessocialesmain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
+.titulomain{
+    h1{
+        @include h1;
+        font-size:2.3rem;
+        margin: 0.5rem;
+    }
+    p{
+        font-size: 1.4rem;
+        margin: 0.5rem;
+    }
+    
+    .frase{
+        font-size: 1.5rem;
+    }
 }
+    .hrmain{
+        margin: 1.5rem auto;
+    }
 
-.redessocialesmain h2{
-    justify-self: center;
-}
+    .redessocialesmain{
+        margin: 4rem;
+        img{
+            width: 350px;
+            height: 350px;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 1.25rem;
+        }
+    }
 
-.redessocialesmain p{
-    font-size: 1.5rem;
-}
+    .publicidadmain{
+        margin: 5rem;
+        img{
+            width: 350px;
+            height: 350px;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 1.25rem;
+        }
+    }
 
-.redessocialesmain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
-    gap: 1.5rem;
-    margin: 7rem;    
-}
+    .fotografiamain{
+        margin: 4rem;
+        img{
+            width: 350px;
+            height: 350px;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 1.25rem;
+        }
+    }
 
-.publicidadmain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
-}
+    .logosmain{
+        margin-top: 10rem;
+        height: 200px;
+        img{
+            height: 150px;
+            width: 150px;
+        }
+    }
 
-.publicidadmain h2{
-    justify-self: center;
-}
-
-.publicidadmain p{
-    justify-self: center;
-    font-size: 1.5rem;
-}
-
-.publicidadmain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas:  "publicidadimagen" "publicidadh2" "publicidadp";
-    gap: 1.5rem;
-    margin: 7rem;
-}
-
-.fotografiamain img{
-    justify-self: center;
-    align-self: center;
-    height: 450px;
-    width: 450px;
-}
-
-.fotografiamain h2{
-    justify-self: center;
-}
-
-.fotografiamain p{
-    justify-self: center;
-    font-size: 1.5rem;
-}
-
-.fotografiamain{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 55% 5% 40%;
-    grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
-    gap: 1.5rem;
-    margin: 7rem;
-}
-
-.logosmain{
-    margin-top: 10rem;
-    height: 300px;
-}
-
-.newslettermain{
-    margin: 10rem;
-}
-
-.newslettermain h2{
-    font-size: 2.1rem;
-}
-
-.newslettermain fieldset input{
-    padding: 12px;
-}
-
-.inputemail{
-    width: 50%;
-    margin-left: 19%;
-}
-
-.inputsubmit{
-    width: 20%;
-}
+    .newslettermain{
+        margin: 8rem;
+        h2{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        fieldset{
+            input{
+                padding: 0.4rem;
+                font-size: 1rem;
+            }
+            .inputemail{
+                width: 40%;
+            }
+            .inputsubmit{
+                width: 15%;
+            }
+        }
+    }
 
 /* FIN INDEX */
 
 /* FOOTER */
 
-    .footer h3{
-        font-size: 1.8rem;
+footer {
+    .logofooter{
+        .logofooterimg {
+            width: 90px;
+            height: 90px;
+        }
     }
-
-    .footer h4{
-        font-size: 1.2rem;
+    h3{
+        font-size: 1.3rem;
+        padding: 0.1rem;
     }
-
-    footer {
-        grid-template-columns: 10% auto 10%;
-        grid-template-rows: 35% 25% 30% 10%;
+    .redesfooter{
+        a img{
+            width: 25px;
+            height: 25px;
+            margin: 6px
+        }
     }
-
-    .logofooterimg {
-        width: 120px;
-        height: 120px;
+    .botonirarriba{
+        img{
+            width: 25px;
+            height: 25px;
+        }
     }
-
-    .redesfooter a img{
-        width: 2rem;
-        height: 2rem;
+    .navfooter{
+        li{
+            font-size: 0.8rem;
+            padding: 0.5rem;
+        }
     }
-
-    .botonirarriba img{
-        width: 2rem;
-        height: 2rem;
+    h4{
+        font-size: 0.9rem;
     }
+}
 
 /* FIN FOOTER */
 
@@ -340,47 +362,360 @@
 
 @media screen and (max-width: 991px){
     
+    body{
+        .gridbody {
+            grid-template-rows: 100px auto 90px;
+            gap: 20px;
+        }
+    }
+
+/* HEADER */
+
     header{
-        grid-template-columns: 15% auto 10%;
+        grid-template-columns: 10% auto 10%;
         grid-template-rows: 100%;
         grid-template-areas: "logoheader tituloheader navheader";
+        .logoheader{
+            width: 80px;
+            height: 80px;
+            .logoheaderimg {
+                width: 80px;
+                height: 80px;
+            }
+        }
         .tituloheader{
-            font-size: 2.7rem;
+            font-size: 2rem;
             justify-content: center;
-            padding-right: 0;
         }
         .navheader{
             border: 0;
             align-self: center;
             .navbar-nav{
-                border-top: 3px;
-                border-color: map-get($estilos, colorPrincipal);
                 li{
-                    font-size: 1.4rem;
-                    font-weight: bold;
-                    padding: 10px;
-                    list-style: none;
-                    a{
-                        transition: all 0.3s ease 0s;
-                        text-decoration: none;
-                        color: map-get($estilos, colorPrincipal);
-                        &:hover{
-                            color: white;
-                            transform: scale(1.1);
-                        }
-                    }
+                    font-size: 1rem;
                 }
             }
         }
     }
 
+/* FIN HEADER */
 
+/* INDEX */
 
-    .navbar li{
-        font-size: 0.93rem;
+.titulomain{
+    h1{
+        @include h1;
+        font-size:2.5rem;
+        margin: 1rem;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 0.6rem;
+    }
+    
+    .frase{
+        font-size: 1.7rem;
+    }
+}
+    .hrmain{
+        margin: 2rem auto;
     }
 
-    .tituloheader{
-        font-size: 2.5rem;
+    .redessocialesmain{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 10% 30%;
+        grid-template-areas: "redessocialesimagen" "redessocialesh2" "redessocialesp";
+        gap: 1.5rem;
+        margin: 5rem;    
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2.3rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
     }
+
+    .publicidadmain{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 10% 30%;
+        grid-template-areas:  "publicidadimagen" "publicidadh2" "publicidadp";
+        gap: 1.5rem;
+        margin: 5rem;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2.3rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+
+    .fotografiamain{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 10% 30%;
+        grid-template-areas: "fotografiaimagen" "fotografiah2" "fotografiap";
+        gap: 1.5rem;
+        margin: 5rem;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2.3rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+
+    .logosmain{
+        margin-top: 7rem;
+        height: 180px;
+        img{
+            height: 130px;
+            width: 130px;
+        }
+    }
+
+    .newslettermain{
+        margin: 5rem;
+        h2{
+            font-size: 1.5rem;
+            margin-bottom: 1.3rem;
+        }
+        fieldset{
+            input{
+                padding: 0.2rem;
+                font-size: 1rem;
+            }
+            .inputemail{
+                width: 40%;
+            }
+            .inputsubmit{
+                width: 17%;
+            }
+        }
+    }
+
+/* FIN INDEX */
+
+/* FOOTER */
+
+footer {
+    grid-template-rows: 40% 40% 20%;
+    grid-template-areas: "logofooter h3footer botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
+    .logofooter{
+        .logofooterimg {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    h3{
+        font-size: 1.2rem;
+        padding: 0.1rem;
+    }
+    .redesfooter{
+        a img{
+            width: 25px;
+            height: 25px;
+            margin: 6px
+        }
+    }
+    .botonirarriba{
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .navfooter{
+        grid-area: navfooter;
+        display: none;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+}
+
+/* FIN FOOTER */
+
+}
+
+@media screen and (max-width: 767px){
+
+    
+    body{
+        .gridbody {
+            grid-template-rows: 80px auto 90px;
+            gap: 20px;
+        }
+    }
+
+/* HEADER */
+
+    header{
+        .logoheader{
+            width: 70px;
+            height: 70px;
+            .logoheaderimg {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        .tituloheader{
+            font-size: 1.7rem;
+        }
+    }
+
+/* FIN HEADER */
+
+/* INDEX */
+
+.titulomain{
+    h1{
+        @include h1;
+        font-size:2.1rem;
+        margin: 0.7rem;
+    }
+    p{
+        font-size: 1.4rem;
+        margin: 0.2rem;
+    }
+    
+    .frase{
+        font-size: 1.4rem;
+    }
+}
+    .hrmain{
+        margin: 1.2rem auto;
+    }
+
+    .redessocialesmain{
+        gap: 1.5rem;
+        margin: 4rem;    
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    .publicidadmain{
+        gap: 1.5rem;
+        margin: 4rem;    
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    .fotografiamain{
+        gap: 1.5rem;
+        margin: 4rem;    
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    .logosmain{
+        margin-top: 6rem;
+        height: 160px;
+        img{
+            height: 120px;
+            width: 120px;
+        }
+    }
+
+    .newslettermain{
+        margin: 4rem;
+        h2{
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+        }
+        fieldset{
+            input{
+                padding: 0.2rem;
+                font-size: 1rem;
+            }
+            .inputemail{
+                width: 50%;
+            }
+            .inputsubmit{
+                width: 25%;
+            }
+        }
+    }
+
+/* FIN INDEX */
+
+/* FOOTER */
+
+footer {
+    grid-template-rows: 40% 40% 20%;
+    grid-template-areas: "logofooter h3footer botonfooter""logofooter redesfooter botonfooter""h4footer h4footer botonfooter";
+    .logofooter{
+        .logofooterimg {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    h3{
+        font-size: 1.2rem;
+        padding: 0.1rem;
+    }
+    .redesfooter{
+        a img{
+            width: 25px;
+            height: 25px;
+            margin: 6px
+        }
+    }
+    .botonirarriba{
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .navfooter{
+        grid-area: navfooter;
+        display: none;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+}
+
+}
+
+@media screen and (max-width: 575px){
+
 }
