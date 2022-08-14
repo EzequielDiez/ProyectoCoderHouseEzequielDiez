@@ -64,55 +64,84 @@
                 <div class="titulotuplan">
                     <h1>Nuestros planes</h1>
                 </div>
-                <div class="planes">
-                    <h2>Básico</h2> 
-                    <h2>Intermedio</h2>
-                    <h2>Full</h2>
-                </div>
-                <div class="numeroplanes">
-                    <div>Plan 1</div>
-                    <div>Plan 2</div>
-                    <div>Plan 3</div>
-                </div>
-                <div>
-                    <h2 class="armatuplan">¡Armá tu plan!</h2>
-                    <div class="checkbox">
-                        <form action="" method="get">
-                            <input type="checkbox" name="item1" value="Item1">
-                            <label for="item1"> Item1</label>
-                            <input type="checkbox" name="item2" value="Item2">
-                            <label for="item2"> Item2</label>
-                            <input type="checkbox" name="item3" value="Item3">
-                            <label for="item3"> Item3</label>
-                            <input type="checkbox" name="item4" value="Item4">
-                            <label for="item4"> Item4</label><br><br>
-                            <input type="checkbox" name="item5" value="Item5">
-                            <label for="item5"> Item5</label>
-                            <input type="checkbox" name="item6" value="Item6">
-                            <label for="item6"> Item6</label>
-                            <input type="checkbox" name="item7" value="Item7">
-                            <label for="item7"> Item7</label>
-                            <input type="checkbox" name="item8" value="Item8">
-                            <label for="item8"> Item8</label><br><br>
-                            <input type="checkbox" name="item9" value="Item9">
-                            <label for="item9"> Item9</label>
-                            <input type="checkbox" name="item10" value="Item10">
-                            <label for="item10"> Item10</label>
-                            <input type="checkbox" name="item11" value="Item11">
-                            <label for="item11"> item11</label>
-                        </form>
+
+                <div class="flex-container planes">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-center bg-transparent">
+                                <img src="../imagenes/Basico.jpg" alt="Planbasico">
+                                <div class="card-body">
+                                    <h3 class="card-title">Básico</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-center bg-transparent">
+                                <img src="../imagenes/Intermedio.jpg" alt="Planintermedio">
+                                <div class="card-body">
+                                    <h3 class="card-title">Intermedio</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-center bg-transparent">
+                                <img src="../imagenes/Full.jpg" alt="Planfull">
+                                <div class="card-body">
+                                    <h3 class="card-title">Full</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="submitplan">
-                        <form action="" method="get">
-                            <fieldset class="fieldsetplan">
-                                <input class="inputnombreplan" type="texto" name="nombre" id="Nombre" placeholder="Nombre y Apellido">
-                                <input class="inputemailplan" type="email" name="email" id="Email" placeholder="nombre@ejemplo.com">
-                                <input class="inputcelularplan" type="number" name="celular" id="Celular" placeholder="N° Celular">
-                                <textarea name="inputtexto" id="texto" cols="30" rows="10" placeholder="Hola, queria saber..."></textarea>
-                                <input class="inputsubmitplan" type="submit" value="Enviar">
-                            </fieldset>
-                        </form>
+                </div>
+      
+
+                <div class="armatuplan">
+                    <h2>¡Armá tu plan personalizado!</h2>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Manejo diario de redes sociales</label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Planificación de contenido mensualmente</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Armado de piezas exclusivas para tu red</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox4">Copywriting</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                        <label class="form-check-label" for="inlineCheckbox5">Manejo de campañas publicitarias en Facebook Ads</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                        <label class="form-check-label" for="inlineCheckbox6">Análisis y métricas de contenido publicado</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                        <label class="form-check-label" for="inlineCheckbox7">Producciones fotográficas profesionales (Tipo de producción según el contenido a publicar de cada marca)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                        <label class="form-check-label" for="inlineCheckbox8">Manejo de campañas por email</label>
+                    </div>
+                </div>
+
+                <div class="submitplan">
+                    <h3>Enviános tu plan y nos comunicámos con vos</h3>
+                    <form action="" method="get">
+                        <fieldset class="fieldsetplan">
+                            <input class="inputnombreplan" type="texto" name="nombre" id="Nombre" placeholder="Nombre y Apellido">
+                            <input class="inputemailplan" type="email" name="email" id="Email" placeholder="nombre@ejemplo.com">
+                            <input class="inputcelularplan" type="number" name="celular" id="Celular" placeholder="N° Celular">
+                            <textarea name="inputtexto" id="texto" cols="30" rows="10" placeholder="Hola, queria saber..."></textarea>
+                            <input class="inputsubmitplan" type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
                 </div>
             </main>
         </div>
