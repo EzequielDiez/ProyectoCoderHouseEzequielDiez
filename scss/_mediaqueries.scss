@@ -6,7 +6,7 @@
             gap: 40px;
         }
     }
-/* HEADER */
+/* INICIO HEADER */
 
 header{
     .logoheader{
@@ -136,6 +136,105 @@ header{
     }
 
 /* FIN INDEX */
+
+/* INICIO QUIENES SOMOS */
+
+.perfil1{
+    margin: 8rem;
+    grid-template-columns: 40% 60%;
+    .imagenperfil1{
+        justify-self: start;
+    }
+}
+
+.perfil2{
+    margin: 8rem;
+    grid-template-columns: 60% 40%;
+    .imagenperfil1{
+        justify-self: end;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* Inicio CSS Main Nuestros planes */
+
+.titulotuplan{
+    h1{
+        @include h1;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+}
+
+.planes{
+    .row{
+        .card{
+            margin: 1rem;
+            .card-body{
+                h3{
+                    font-size: 2.3rem;
+                }
+            }          
+        }
+    }
+}
+
+.armatuplan{
+    h2{
+        font-size: 2.6rem;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+    .form-check{
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin: 1rem;
+    }
+}
+
+.submitplan{
+    margin-top: 3rem;
+    h3{
+        font-size: 2.3rem;
+    }
+    .fieldsetplan{
+        margin: 1.5rem;
+        input{
+            font-size: 1.2rem;
+        }
+        textarea{
+            font-size: 1.4rem;
+            height: 7rem;
+        }
+    }
+}
+
+/* Fin CSS Main Nuestros planes */
+
+/* Inicio CSS Main Portfolio */
+
+main{
+    h1{
+        @include h1;
+        font-size: 2.8rem;
+    }
+    .carousel{
+        h2{
+            font-size: 2rem;
+        }
+        .carousel-inner{
+            img{
+                height: 25%;
+                width: 25%;
+                margin:0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}
+
+/* Fin CSS Main Portfolio */
 
 /* FOOTER */
 
@@ -317,6 +416,54 @@ header{
     }
 
 /* FIN INDEX */
+
+/* INICIO QUIENES SOMOS */
+
+.perfil1{
+    margin: 6rem;
+    grid-template-columns: 30% 70%;
+    .imagenperfil1{
+        justify-self: start;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.perfil2{
+    margin: 6rem;
+    grid-template-columns: 70% 30%;
+    .imagenperfil2{
+        justify-self: start;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* Inicio CSS Main Portfolio */
+
+main{
+    h1{
+        @include h1;
+        font-size: 2.3rem;
+    }
+    .carousel{
+        h2{
+            font-size: 1.8rem;
+        }
+        .carousel-inner{
+            img{
+                height: 25%;
+                width: 25%;
+                margin:0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}
+
+/* Fin CSS Main Portfolio */
 
 /* FOOTER */
 
@@ -509,6 +656,160 @@ footer {
 
 /* FIN INDEX */
 
+/* INICIO QUIENES SOMOS */
+
+.perfil1{
+    margin: 2rem;
+    margin-top: 6rem;
+    grid-template-rows: auto auto;
+    h2{
+        font-size: 2.5rem;
+        align-self: center;
+    }
+    p{
+        font-size: 2rem;
+        align-self: center;
+        margin: 0;
+    }
+}
+
+.perfil2{
+    margin: 2rem;
+    margin-top: 6rem;
+    grid-template-rows: auto auto;
+    h2{
+        font-size: 2.5rem;
+        align-self: center;
+    }
+    p{
+        font-size: 2rem;
+        align-self: center;
+        margin: 0;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* Inicio CSS Main Nuestros planes */
+
+.titulotuplan{
+    h1{
+        @include h1;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+}
+
+.planes{
+    justify-content: center;
+    .row{
+        .card{
+            display:block;
+            margin: 1rem;
+            img{
+                width: 70%;
+                height: 70%;
+                transition: all 0.3s ease 0s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+            .card-body{
+                h3{
+                    font-size: 2.3rem;
+                }
+            }          
+        }
+    }
+}
+
+.armatuplan{
+    h2{
+        font-size: 2.2rem;
+    }
+    .form-check{
+        font-size: 1.5rem;
+        margin: 0.8rem;
+    }
+}
+
+.submitplan{
+    margin-top: 3rem;
+    h3{
+        font-size: 1.7rem;
+    }
+    .fieldsetplan{
+        margin: 1.5rem;
+        input{
+            width: 35%;
+            font-size: 1rem;
+        }
+        textarea{
+            font-size: 1.2rem;
+            height: 6rem;
+            width: 100%;
+        }
+    }
+}
+
+/* Fin CSS Main Nuestros planes */
+
+/* Inicio CSS Main Portfolio */
+
+main{
+    h1{
+        @include h1;
+        font-size: 1.8rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .carousel{
+        h2{
+            font-size: 1.5rem;
+        }
+        .carousel-inner{
+            img{
+                height: 25%;
+                width: 25%;
+                margin:0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}
+
+/* Fin CSS Main Portfolio */
+
+/* Inicio CSS Main Contacto */
+
+.titulocontacto{
+    margin: 0%;
+    margin-bottom: 1rem;
+    h1{
+        @include h1;
+        font-size: 2.5rem;
+    }
+}
+
+.listacontacto{
+    font-size: 1.1rem;
+    img{
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 1rem;
+    }
+    li{
+        margin-bottom: 1rem;
+    }
+}
+
+div iframe{
+    width: 100%;
+    height: 300px;
+}
+
+/* Fin CSS Main Contacto */
+
 /* FOOTER */
 
 footer {
@@ -676,6 +977,136 @@ footer {
 
 /* FIN INDEX */
 
+/* INICIO QUIENES SOMOS */
+
+.perfil1{
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil1" "perfil1h2" "perfil1p";
+    .imagenperfil1{
+        width: 200px;
+        height: 200px;
+        justify-self: center;
+        margin: 3rem;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 2.1rem;
+        margin: 1rem;
+    }
+}
+
+.perfil2{
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil2" "perfil2h2" "perfil2p";
+    .imagenperfil2{
+        width: 200px;
+        height: 200px;
+        justify-self: center;
+        margin: 3rem;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 2.1rem;
+        margin: 1rem;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* Inicio CSS Main Nuestros planes */
+
+.titulotuplan{
+    h1{
+        @include h1;
+        margin: 1rem;
+        font-size: 2.5rem;
+    }
+}
+
+.planes{
+    justify-content: center;
+    .row{
+        .card{
+            display:block;
+            margin: 1rem;
+            img{
+                width: 70%;
+                height: 70%;
+            }
+            .card-body{
+                h3{
+                    font-size: 2rem;
+                }
+            }          
+        }
+    }
+}
+
+.armatuplan{
+    h2{
+        font-size: 2rem;
+    }
+    .form-check{
+        font-size: 1.4rem;
+        margin: 0.5rem;
+    }
+}
+
+.submitplan{
+    margin-top: 2rem;
+    h3{
+        font-size: 1.4rem;
+    }
+    .fieldsetplan{
+        margin: 1.5rem;
+        input{
+            width: 40%;
+            font-size: 1rem;
+        }
+        textarea{
+            font-size: 1.1rem;
+            height: 6rem;
+            width: 100%;
+        }
+    }
+}
+
+/* Fin CSS Main Nuestros planes */
+
+/* Inicio CSS Main Portfolio */
+
+main{
+    h1{
+        @include h1;
+        font-size: 1.5rem;
+        margin: 0;
+        margin-bottom: 0.8rem;
+    }
+    .carousel{
+        h2{
+            font-size: 1.2rem;
+        }
+        .carousel-inner{
+            img{
+                height: 25%;
+                width: 25%;
+                margin:0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}
+
+/* Fin CSS Main Portfolio */
+
 /* FOOTER */
 
 footer {
@@ -820,23 +1251,22 @@ footer {
     .logosmain{
         margin-top: 6rem;
         height: 120px;
-        justify-content: start;
         img{
-            height: 60px;
-            width: 60px;
+            height: 70px;
+            width: 70px;
         }
     }
 
     .newslettermain{
-        margin: 4rem;
+        margin: 2.5rem;
         h2{
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-bottom: 1.2rem;
         }
         fieldset{
             input{
                 padding: 0.2rem;
-                font-size: 1rem;
+                font-size: 0.85rem;
             }
             .inputemail{
                 width: 50%;
@@ -848,6 +1278,233 @@ footer {
     }
 
 /* FIN INDEX */
+
+/* INICIO QUIENES SOMOS */
+
+.tituloquienessomos{
+    h1{
+        @include h1;
+        margin: 0%;
+        margin-top: 1rem;
+        font-size: 2.3rem;
+    }
+}
+
+.historia{
+    margin: 0%;
+    margin-top: 2rem;
+    h2{
+        color: map-get($estilos, colorPrincipal);
+        font-weight: bold;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    p{
+        color: black;
+        font-weight: 500;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+.hrmain{
+    width: 50%;
+    margin: 3rem auto;
+    background-color: map-get($estilos, colorPrincipal);
+    height: 3px;
+}
+
+.perfil1{
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil1" "perfil1h2" "perfil1p";
+    .imagenperfil1{
+        width: 150px;
+        height: 150px;
+        justify-self: center;
+        margin: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    p{
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+}
+
+.perfil2{
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil2" "perfil2h2" "perfil2p";
+    .imagenperfil2{
+        width: 150px;
+        height: 150px;
+        justify-self: center;
+        margin: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    p{
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* Inicio CSS Main Nuestros servicios */
+
+.titulonuestrosservicios{
+    margin-bottom: 0;
+    h1{
+        @include h1;
+        font-size: 2.1rem;
+    }
+}
+
+.servicios{
+    margin-left: 5%;
+    margin-right: 5%;
+    h2{
+        font-size: 1.5rem;
+    }
+    ul{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        li{
+            margin-bottom: 0.8rem;
+        }
+    }
+}
+
+/* Fin CSS Main Nuestros servicios */
+
+/* Inicio CSS Main Nuestros planes */
+
+.titulotuplan{
+    h1{
+        @include h1;
+        margin: 0.5rem;
+        font-size: 2rem;
+    }
+}
+
+.planes{
+    justify-content: center;
+    .row{
+        .card{
+            display:block;
+            margin: 0.5rem;
+            img{
+                width: 70%;
+                height: 70%;
+            }
+            .card-body{
+                h3{
+                    font-size: 1.5rem;
+                }
+            }          
+        }
+    }
+}
+
+.armatuplan{
+    h2{
+        font-size: 1.5rem;
+    }
+    .form-check{
+        font-size: 1rem;
+        margin: 0.3rem;
+    }
+}
+
+.submitplan{
+    margin-top: 1rem;
+    h3{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .fieldsetplan{
+        margin: 1.5rem;
+        input{
+            width: 50%;
+            font-size: 0.8rem;
+            height: 1.5rem;
+        }
+        textarea{
+            font-size: 1rem;
+            height: 5rem;
+            width: 100%;
+        }
+    }
+}
+
+/* Fin CSS Main Nuestros planes */
+
+/* Inicio CSS Main Portfolio */
+
+main{
+    h1{
+        @include h1;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-bottom: 0.8rem;
+    }
+    .carousel{
+        h2{
+            font-size: 1rem;
+        }
+        .carousel-inner{
+            img{
+                height: 25%;
+                width: 25%;
+                margin:0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}
+
+/* Fin CSS Main Portfolio */
+
+/* Inicio CSS Main Contacto */
+
+.titulocontacto{
+    margin: 0%;
+    margin-bottom: 0.5rem;
+    h1{
+        @include h1;
+        font-size: 2rem;
+    }
+}
+
+.listacontacto{
+    font-size: 1rem;
+    img{
+        height: 1.4rem;
+        width: 1.4rem;
+        margin-right: 0.5rem;
+    }
+    ul{
+        padding: 0%;
+        li{
+            margin-bottom: 0.8rem;
+        }
+    }
+    
+}
+
+div iframe{
+    width: 100%;
+    height: 250px;
+}
+
+/* Fin CSS Main Contacto */
 
 /* FOOTER */
 

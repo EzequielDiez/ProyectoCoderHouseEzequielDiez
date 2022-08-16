@@ -73,7 +73,7 @@ header .navheader .navbar-nav {
   border-color: #764B36;
 }
 header .navheader .navbar-nav li {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: bold;
   padding: 10px;
   list-style: none;
@@ -297,6 +297,8 @@ header .navheader .navbar-nav li a:hover {
   border-radius: 100%;
   display: flex;
   align-self: center;
+  width: 250px;
+  height: 250px;
 }
 .perfil1 h2 {
   grid-area: perfil1h2;
@@ -308,7 +310,7 @@ header .navheader .navbar-nav li a:hover {
   grid-area: perfil1p;
   font-size: 2.2rem;
   align-self: center;
-  font-weight: 550;
+  font-weight: bold;
   color: black;
   margin: 2rem;
 }
@@ -326,6 +328,8 @@ header .navheader .navbar-nav li a:hover {
   border-radius: 100%;
   display: flex;
   align-self: center;
+  width: 250px;
+  height: 250px;
 }
 .perfil2 h2 {
   grid-area: perfil2h2;
@@ -337,7 +341,7 @@ header .navheader .navbar-nav li a:hover {
   grid-area: perfil2p;
   font-size: 2.2rem;
   align-self: center;
-  font-weight: 550;
+  font-weight: bold;
   color: black;
   margin: 2rem;
 }
@@ -412,8 +416,8 @@ header .navheader .navbar-nav li a:hover {
   margin: 2rem;
 }
 .planes .row .card img {
-  width: 35rem;
-  height: 45rem;
+  width: 100%;
+  height: 100%;
   transition: all 0.3s ease 0s;
 }
 .planes .row .card img:hover {
@@ -545,26 +549,22 @@ main .carousel .carousel-control-next-icon {
   flex-direction: row;
   align-items: center;
 }
-
+.listacontacto img {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
 .listacontacto li {
   list-style: none;
   margin-bottom: 20px;
 }
-
 .listacontacto li a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #764B36;
 }
-
 .listacontacto li a:hover {
   color: white;
-}
-
-.listacontacto img {
-  height: 30px;
-  width: 30px;
-  margin-right: 20px;
 }
 
 div iframe {
@@ -663,7 +663,7 @@ footer h4 {
     grid-template-rows: 110px auto 150px;
     gap: 40px;
   }
-  /* HEADER */
+  /* INICIO HEADER */
   header .logoheader {
     grid-area: logoheader;
     width: 110px;
@@ -779,6 +779,90 @@ footer h4 {
     width: 15%;
   }
   /* FIN INDEX */
+  /* INICIO QUIENES SOMOS */
+  .perfil1 {
+    margin: 8rem;
+    grid-template-columns: 40% 60%;
+  }
+  .perfil1 .imagenperfil1 {
+    justify-self: start;
+  }
+  .perfil2 {
+    margin: 8rem;
+    grid-template-columns: 60% 40%;
+  }
+  .perfil2 .imagenperfil1 {
+    justify-self: end;
+  }
+  /* FIN QUIENES SOMOS */
+  /* Inicio CSS Main Nuestros planes */
+  .titulotuplan h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    margin: 1rem;
+    font-size: 3rem;
+  }
+  .planes .row .card {
+    margin: 1rem;
+  }
+  .planes .row .card .card-body h3 {
+    font-size: 2.3rem;
+  }
+  .armatuplan h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+  .armatuplan .form-check {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 1rem;
+  }
+  .submitplan {
+    margin-top: 3rem;
+  }
+  .submitplan h3 {
+    font-size: 2.3rem;
+  }
+  .submitplan .fieldsetplan {
+    margin: 1.5rem;
+  }
+  .submitplan .fieldsetplan input {
+    font-size: 1.2rem;
+  }
+  .submitplan .fieldsetplan textarea {
+    font-size: 1.4rem;
+    height: 7rem;
+  }
+  /* Fin CSS Main Nuestros planes */
+  /* Inicio CSS Main Portfolio */
+  main h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.8rem;
+  }
+  main .carousel h2 {
+    font-size: 2rem;
+  }
+  main .carousel .carousel-inner img {
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+  }
+  /* Fin CSS Main Portfolio */
   /* FOOTER */
   footer {
     display: grid;
@@ -930,6 +1014,48 @@ footer h4 {
     width: 15%;
   }
   /* FIN INDEX */
+  /* INICIO QUIENES SOMOS */
+  .perfil1 {
+    margin: 6rem;
+    grid-template-columns: 30% 70%;
+  }
+  .perfil1 .imagenperfil1 {
+    justify-self: start;
+    width: 200px;
+    height: 200px;
+  }
+  .perfil2 {
+    margin: 6rem;
+    grid-template-columns: 70% 30%;
+  }
+  .perfil2 .imagenperfil2 {
+    justify-self: start;
+    width: 200px;
+    height: 200px;
+  }
+  /* FIN QUIENES SOMOS */
+  /* Inicio CSS Main Portfolio */
+  main h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.3rem;
+  }
+  main .carousel h2 {
+    font-size: 1.8rem;
+  }
+  main .carousel .carousel-inner img {
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+  }
+  /* Fin CSS Main Portfolio */
   /* FOOTER */
   footer .logofooter .logofooterimg {
     width: 90px;
@@ -1091,6 +1217,149 @@ footer h4 {
     width: 17%;
   }
   /* FIN INDEX */
+  /* INICIO QUIENES SOMOS */
+  .perfil1 {
+    margin: 2rem;
+    margin-top: 6rem;
+    grid-template-rows: auto auto;
+  }
+  .perfil1 h2 {
+    font-size: 2.5rem;
+    align-self: center;
+  }
+  .perfil1 p {
+    font-size: 2rem;
+    align-self: center;
+    margin: 0;
+  }
+  .perfil2 {
+    margin: 2rem;
+    margin-top: 6rem;
+    grid-template-rows: auto auto;
+  }
+  .perfil2 h2 {
+    font-size: 2.5rem;
+    align-self: center;
+  }
+  .perfil2 p {
+    font-size: 2rem;
+    align-self: center;
+    margin: 0;
+  }
+  /* FIN QUIENES SOMOS */
+  /* Inicio CSS Main Nuestros planes */
+  .titulotuplan h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    margin: 1rem;
+    font-size: 3rem;
+  }
+  .planes {
+    justify-content: center;
+  }
+  .planes .row .card {
+    display: block;
+    margin: 1rem;
+  }
+  .planes .row .card img {
+    width: 70%;
+    height: 70%;
+    transition: all 0.3s ease 0s;
+  }
+  .planes .row .card img:hover {
+    transform: scale(1.05);
+  }
+  .planes .row .card .card-body h3 {
+    font-size: 2.3rem;
+  }
+  .armatuplan h2 {
+    font-size: 2.2rem;
+  }
+  .armatuplan .form-check {
+    font-size: 1.5rem;
+    margin: 0.8rem;
+  }
+  .submitplan {
+    margin-top: 3rem;
+  }
+  .submitplan h3 {
+    font-size: 1.7rem;
+  }
+  .submitplan .fieldsetplan {
+    margin: 1.5rem;
+  }
+  .submitplan .fieldsetplan input {
+    width: 35%;
+    font-size: 1rem;
+  }
+  .submitplan .fieldsetplan textarea {
+    font-size: 1.2rem;
+    height: 6rem;
+    width: 100%;
+  }
+  /* Fin CSS Main Nuestros planes */
+  /* Inicio CSS Main Portfolio */
+  main h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  main .carousel h2 {
+    font-size: 1.5rem;
+  }
+  main .carousel .carousel-inner img {
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+  }
+  /* Fin CSS Main Portfolio */
+  /* Inicio CSS Main Contacto */
+  .titulocontacto {
+    margin: 0%;
+    margin-bottom: 1rem;
+  }
+  .titulocontacto h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.5rem;
+  }
+  .listacontacto {
+    font-size: 1.1rem;
+  }
+  .listacontacto img {
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: 1rem;
+  }
+  .listacontacto li {
+    margin-bottom: 1rem;
+  }
+  div iframe {
+    width: 100%;
+    height: 300px;
+  }
+  /* Fin CSS Main Contacto */
   /* FOOTER */
   footer {
     grid-template-rows: 40% 40% 20%;
@@ -1231,6 +1500,123 @@ footer h4 {
     width: 25%;
   }
   /* FIN INDEX */
+  /* INICIO QUIENES SOMOS */
+  .perfil1 {
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil1" "perfil1h2" "perfil1p";
+  }
+  .perfil1 .imagenperfil1 {
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    margin: 3rem;
+  }
+  .perfil1 h2 {
+    font-size: 2.8rem;
+  }
+  .perfil1 p {
+    font-size: 2.1rem;
+    margin: 1rem;
+  }
+  .perfil2 {
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil2" "perfil2h2" "perfil2p";
+  }
+  .perfil2 .imagenperfil2 {
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    margin: 3rem;
+  }
+  .perfil2 h2 {
+    font-size: 2.8rem;
+  }
+  .perfil2 p {
+    font-size: 2.1rem;
+    margin: 1rem;
+  }
+  /* FIN QUIENES SOMOS */
+  /* Inicio CSS Main Nuestros planes */
+  .titulotuplan h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+  .planes {
+    justify-content: center;
+  }
+  .planes .row .card {
+    display: block;
+    margin: 1rem;
+  }
+  .planes .row .card img {
+    width: 70%;
+    height: 70%;
+  }
+  .planes .row .card .card-body h3 {
+    font-size: 2rem;
+  }
+  .armatuplan h2 {
+    font-size: 2rem;
+  }
+  .armatuplan .form-check {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+  }
+  .submitplan {
+    margin-top: 2rem;
+  }
+  .submitplan h3 {
+    font-size: 1.4rem;
+  }
+  .submitplan .fieldsetplan {
+    margin: 1.5rem;
+  }
+  .submitplan .fieldsetplan input {
+    width: 40%;
+    font-size: 1rem;
+  }
+  .submitplan .fieldsetplan textarea {
+    font-size: 1.1rem;
+    height: 6rem;
+    width: 100%;
+  }
+  /* Fin CSS Main Nuestros planes */
+  /* Inicio CSS Main Portfolio */
+  main h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 0.8rem;
+  }
+  main .carousel h2 {
+    font-size: 1.2rem;
+  }
+  main .carousel .carousel-inner img {
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+  }
+  /* Fin CSS Main Portfolio */
   /* FOOTER */
   footer {
     grid-template-rows: 40% 40% 20%;
@@ -1358,22 +1744,21 @@ footer h4 {
   .logosmain {
     margin-top: 6rem;
     height: 120px;
-    justify-content: start;
   }
   .logosmain img {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
   .newslettermain {
-    margin: 4rem;
+    margin: 2.5rem;
   }
   .newslettermain h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 1.2rem;
   }
   .newslettermain fieldset input {
     padding: 0.2rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .newslettermain fieldset .inputemail {
     width: 50%;
@@ -1382,6 +1767,226 @@ footer h4 {
     width: 25%;
   }
   /* FIN INDEX */
+  /* INICIO QUIENES SOMOS */
+  .tituloquienessomos h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    margin: 0%;
+    margin-top: 1rem;
+    font-size: 2.3rem;
+  }
+  .historia {
+    margin: 0%;
+    margin-top: 2rem;
+  }
+  .historia h2 {
+    color: #764B36;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .historia p {
+    color: black;
+    font-weight: 500;
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+  .hrmain {
+    width: 50%;
+    margin: 3rem auto;
+    background-color: #764B36;
+    height: 3px;
+  }
+  .perfil1 {
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil1" "perfil1h2" "perfil1p";
+  }
+  .perfil1 .imagenperfil1 {
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    margin: 2rem;
+  }
+  .perfil1 h2 {
+    font-size: 1.7rem;
+  }
+  .perfil1 p {
+    font-size: 1.3rem;
+    margin: 1rem;
+  }
+  .perfil2 {
+    margin: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenperfil2" "perfil2h2" "perfil2p";
+  }
+  .perfil2 .imagenperfil2 {
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    margin: 2rem;
+  }
+  .perfil2 h2 {
+    font-size: 1.7rem;
+  }
+  .perfil2 p {
+    font-size: 1.3rem;
+    margin: 1rem;
+  }
+  /* FIN QUIENES SOMOS */
+  /* Inicio CSS Main Nuestros servicios */
+  .titulonuestrosservicios {
+    margin-bottom: 0;
+  }
+  .titulonuestrosservicios h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2.1rem;
+  }
+  .servicios {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .servicios h2 {
+    font-size: 1.5rem;
+  }
+  .servicios ul {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .servicios ul li {
+    margin-bottom: 0.8rem;
+  }
+  /* Fin CSS Main Nuestros servicios */
+  /* Inicio CSS Main Nuestros planes */
+  .titulotuplan h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+  }
+  .planes {
+    justify-content: center;
+  }
+  .planes .row .card {
+    display: block;
+    margin: 0.5rem;
+  }
+  .planes .row .card img {
+    width: 70%;
+    height: 70%;
+  }
+  .planes .row .card .card-body h3 {
+    font-size: 1.5rem;
+  }
+  .armatuplan h2 {
+    font-size: 1.5rem;
+  }
+  .armatuplan .form-check {
+    font-size: 1rem;
+    margin: 0.3rem;
+  }
+  .submitplan {
+    margin-top: 1rem;
+  }
+  .submitplan h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .submitplan .fieldsetplan {
+    margin: 1.5rem;
+  }
+  .submitplan .fieldsetplan input {
+    width: 50%;
+    font-size: 0.8rem;
+    height: 1.5rem;
+  }
+  .submitplan .fieldsetplan textarea {
+    font-size: 1rem;
+    height: 5rem;
+    width: 100%;
+  }
+  /* Fin CSS Main Nuestros planes */
+  /* Inicio CSS Main Portfolio */
+  main h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 0.8rem;
+  }
+  main .carousel h2 {
+    font-size: 1rem;
+  }
+  main .carousel .carousel-inner img {
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+  }
+  /* Fin CSS Main Portfolio */
+  /* Inicio CSS Main Contacto */
+  .titulocontacto {
+    margin: 0%;
+    margin-bottom: 0.5rem;
+  }
+  .titulocontacto h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #764B36;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  .listacontacto {
+    font-size: 1rem;
+  }
+  .listacontacto img {
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-right: 0.5rem;
+  }
+  .listacontacto ul {
+    padding: 0%;
+  }
+  .listacontacto ul li {
+    margin-bottom: 0.8rem;
+  }
+  div iframe {
+    width: 100%;
+    height: 250px;
+  }
+  /* Fin CSS Main Contacto */
   /* FOOTER */
   footer {
     grid-template-columns: 20% 60% 20%;

@@ -76,7 +76,7 @@ header{
             border-top: 3px;
             border-color: map-get($estilos, colorPrincipal);
             li{
-                font-size: 1.35rem;
+                font-size: 1.3rem;
                 font-weight: bold;
                 padding: 10px;
                 list-style: none;
@@ -297,6 +297,8 @@ header{
         border-radius: 100%;
         display: flex;
         align-self: center;
+        width: 250px;
+        height: 250px;
     }
     h2{
         grid-area: perfil1h2;
@@ -308,7 +310,7 @@ header{
         grid-area: perfil1p;
         font-size: 2.2rem;
         align-self: center;
-        font-weight: 550;
+        font-weight: bold;
         color: black;
         margin: 2rem;
     }
@@ -326,6 +328,8 @@ header{
         border-radius: 100%;
         display: flex;
         align-self: center;
+        width: 250px;
+        height: 250px;
     }
     h2{
         grid-area: perfil2h2;
@@ -337,7 +341,7 @@ header{
         grid-area: perfil2p;
         font-size: 2.2rem;
         align-self: center;
-        font-weight: 550;
+        font-weight: bold;
         color: black;
         margin: 2rem;
     }
@@ -380,7 +384,6 @@ header{
     }
 }
 
-
 /* Fin CSS Main Nuestros servicios */
 
 /* Inicio CSS Main Nuestros planes */
@@ -403,8 +406,8 @@ header{
             border: 0;
             margin: 2rem;
             img{
-                width: 35rem;
-                height: 45rem;
+                width: 100%;
+                height: 100%;
                 transition: all 0.3s ease 0s;
                 &:hover{
                     transform: scale(1.05);
@@ -540,35 +543,30 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.listacontacto li{
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.listacontacto li a{
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: map-get($estilos, colorPrincipal);
-}
-
-.listacontacto li a:hover{
-    color: white;
-}
-
-.listacontacto img{
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-
+    img{
+        height: 30px;
+        width: 30px;
+        margin-right: 20px;
+    
+    }
+    li{
+        list-style: none;
+        margin-bottom: 20px;
+        a{
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            color: map-get($estilos, colorPrincipal);
+            &:hover{
+                color: white;
+            }
+        }
+    }
 }
 
 div iframe{
     border-color: map-get($estilos, colorPrincipal);
     border-radius: 5%;
 }
-
 
 /* Fin CSS Main Contacto */
 
